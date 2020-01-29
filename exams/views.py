@@ -3,6 +3,9 @@ from django.core.mail import send_mail
 from django.core.paginator import Paginator
 from django.contrib import messages
 from datetime import date
+import os
+from django.conf import settings
+from django.http import HttpResponse, Http404
 
 from . import models, forms
 
@@ -76,3 +79,50 @@ def CurrentAffairView(request, id):
             'categories': all_categories,
         }
         return render(request, 'currentaffair.html', context)
+
+
+def PreviousYearQAView(request):
+    files = models.previous_year.objects.all().order_by('year')
+    search_term = ''
+
+    # if 'category' in request.GET:
+    #     selected_category_title = request.GET.get('category')
+    #     all_current_affairs = all_current_affairs.filter(category__title=selected_category_title)
+    #
+    # if 'search' in request.GET:
+    #     search_term = request.GET['search']
+    #     all_current_affairs = all_current_affairs.filter(Q(title__icontains = search_term)| Q(library_description__icontains=search_term))
+
+    paginator = Paginator(files, 10)
+
+    page = request.GET.get('page')
+    files = paginator.get_page(page)
+
+    get_dict_copy = request.GET.copy()
+    params = get_dict_copy.pop('page', True) and get_dict_copy.urlencode()
+    context = {
+        'files': files,
+        'params': params,
+        'search_term': search_term
+    }
+    return render(request, 'previousyearqa.html', context)
+
+def download(request, path):
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
+
+    with open('path/test.pdf', 'rb') as pdf:
+        response = HttpResponse(pdf.read())
+        reponse['content_type'] = 'application/pdf'
+        response['Content-Disposition'] = 'attachment;filename=file.pdf'
+        return response
+
+
+
+
+
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            return response
+    raise Http404

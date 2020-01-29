@@ -8,7 +8,7 @@ from . import models
 class LibraryForm(forms.ModelForm):
     class Meta:
         model = models.library
-        exclude = ['owner', 'verified','visible','views'] #'opening_time', 'closing_time']
+        exclude = ['owner', 'verified','visible','views']
         # fields = '__all__'
         # labels =
         # widgets =
@@ -17,13 +17,37 @@ class LibraryForm(forms.ModelForm):
             'closing_time': forms.TimeInput(),
             'ammenities': forms.SelectMultiple(),
             'payment_methods': forms.SelectMultiple(),
-
         }
-
-
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = models.User
         fields = ['first_name', 'last_name']
         # labels =
+        # widgets =
+
+class EnquiryForm(forms.ModelForm):
+    class Meta:
+        model = models.enquiry
+        fields = '__all__'
+        # labels =
+        # widgets =
+
+class BugReportForm(forms.ModelForm):
+    class Meta:
+        model = models.bug_report
+        fields = '__all__'
+        # labels =
+        # widgets =
+
+class TestimonialForm(forms.ModelForm):
+    class Meta:
+        model = models.testimonial
+        fields = '__all__'
+        # labels =
+        # widgets =
+
+class NewsletterForm(forms.ModelForm):
+    class Meta:
+        model = models.newsletter
+        fields = '__all__'

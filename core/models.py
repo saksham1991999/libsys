@@ -42,6 +42,9 @@ class weekday(models.Model):
     def __str__(self):
         return self.day
 
+    class Meta:
+        verbose_name_plural = 'Weekdays'
+
 class library(models.Model):
     name = models.CharField(max_length=50)
 
@@ -115,11 +118,21 @@ class bookmark(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     libraries = models.ManyToManyField(library)
 
-    # def __str__(self):
-    #     return self.user.username
+    def __str__(self):
+        return self.user.username
 
     class Meta:
         verbose_name_plural = 'Bookmarks'
+
+class comaprison(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    libraries = models.ManyToManyField(library)
+
+    def __str__(self):
+        return self.user.username
+
+    class Meta:
+        verbose_name_plural = 'Comparison of Libraries'
 
 
 
@@ -137,14 +150,18 @@ class testimonial(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Testimonials'
+
 class enquiry(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
     contact_no = models.IntegerField()
     preferred_joining_date = models.DateField()
     preferred_time_slot = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.user.username
+        return self.name
 
     class Meta:
         verbose_name_plural = 'Enquiries'
@@ -156,13 +173,37 @@ class newsletter(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Newsletter Subscribers'
+
 class bug_report(models.Model):
     name = models.CharField(max_length=100)
     contact_no = models.IntegerField()
     email = models.EmailField()
     issue = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(blank= True, null = True)
 
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Bug Reports'
+
+class faq(models.Model):
+    question = models.CharField(max_length=200)
+    answer = models.TextField()
+
+    def __str__(self):
+        return self.question
+
+    class Meta:
+        verbose_name_plural = 'FAQ'
+
+class TermsAndConditions(models.Model):
+    content = models.TextField()
+
+    def __str__(self):
+        return self.content
+
+    class Meta:
+        verbose_name_plural = 'Terms And Conditions'

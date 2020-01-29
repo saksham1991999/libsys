@@ -51,7 +51,7 @@
 						</div>
 					</li>
                     -->
-					<li class="with-btn"><a href="{% url 'core:addlibrary' %}" class="button border">Submit Property</a></li>
+					<li class="with-btn"><a href="{% url 'core:addlibrary' %}" class="button border">Add Library</a></li>
                 </ul>
 
             </div>
@@ -87,6 +87,12 @@
 								</li>
 							</ul> -->
 						</li>
+                                            <li>
+                            <a href="{% url 'blog:home' %}" {% if request.resolver_match.view_name == 'core:contact' %}class="current"{% endif %}>Blog</a>
+						</li>
+                        <li>
+                            <a href="{% url 'exams:currentaffairs' %}" {% if request.resolver_match.view_name == 'core:contact' %}class="current"{% endif %}>Current Affairs</a>
+						</li>
 						<li><a href="{% url 'core:contact' %}" {% if request.resolver_match.view_name == 'core:contact' %}class="current"{% endif %}>Contact Us</a>
 						</li>
 <!-- 						<li class="right-side-menu-item"><a href="login-register.html" class="sign-in"><i class="fa fa-user"></i> Log In / Register</a></li> -->
@@ -120,6 +126,12 @@
 								</li>
 							</ul>-->
 						</li>
+                        <li>
+                            <a href="{% url 'blog:home' %}" {% if request.resolver_match.view_name == 'blog:home' %}class="current"{% endif %}>Blog</a>
+						</li>
+                        <li>
+                            <a href="{% url 'exams:currentaffairs' %}" {% if request.resolver_match.view_name == 'exams:currentaffairs' %}class="current"{% endif %}>Current Affairs</a>
+						</li>
 						<li>
                             <a href="{% url 'core:contact' %}" {% if request.resolver_match.view_name == 'core:contact' %}class="current"{% endif %}>Contact Us</a>
 						</li>
@@ -138,7 +150,7 @@
                             <ul>
                                 <li><a href="{% url 'core:userprofile' %}"><i class="sl sl-icon-user"></i> My Profile</a></li>
                                 <li><a href="{% url 'core:bookmarks' %}"><i class="sl sl-icon-star"></i> Bookmarks</a></li>
-                                <li><a href="{% url 'core:mylibraries' %}"><i class="sl sl-icon-docs"></i> My Properties</a></li>
+                                <li><a href="{% url 'core:mylibraries' %}"><i class="sl sl-icon-docs"></i> My Libraries</a></li>
                                 <li><a href="{% url 'account_logout' %}"><i class="sl sl-icon-power"></i> Log Out</a></li>
                             </ul>
                         {% else %}

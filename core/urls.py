@@ -13,21 +13,31 @@ urlpatterns = [
     #path('api/', include(router.urls)),
     path('', views.HomeView, name='home'),
     path('contact', views.ContactView, name='contact'),
+    path('submit-testimonial', views.TestimonialsView, name='testimonial'),
+    path('report-bug', views.BugReportView, name='reportbug'),
+    path('faq', views.FAQView, name='faq'),
+
     path('libraries', views.LibrariesView, name='libraries'),
     path('library/<int:id>', views.LibraryView, name='library'),
+
 
 
     path('user-profile', views.UserProfileView, name='userprofile'),
     path('my-libraries', views.myLibraries, name='mylibraries'),
     path('hide-library/<int:id>', views.hideLibrary, name='hidelibrary'),
     path('show-library/<int:id>', views.showLibrary, name='showlibrary'),
+    path('addlibrary', views.addLibrary, name='addlibrary'),
+    path('editlibrary/<int:id>', views.editLibrary, name='editlibrary'),
+    path('deletelibrary/<int:id>', views.deleteLibrary, name='deletelibrary'),
 
     path('my-bookmarks', views.BookmarkView, name='bookmarks'),
     path('add-to-bookmarks/<int:id>', views.add_to_bookmark, name='addtobookmarks'),
     path('remove-from-bookmarks/<int:id>', views.remove_from_bookmark, name='removefrombookmarks'),
 
-    path('addlibrary', views.addLibrary, name='addlibrary'),
-    path('editlibrary/<int:id>', views.editLibrary, name='editlibrary'),
-    path('deletelibrary/<int:id>', views.deleteLibrary, name='deletelibrary'),
+    path('comparison-list', views.ComparisonView, name='compare'),
+    path('add-to-compare/<int:id>', views.add_to_compare, name='addtocompare'),
+    path('remove-from-compare/<int:id>', views.remove_from_compare, name='removefromcompare'),
+
+
 
 ]

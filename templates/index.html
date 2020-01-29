@@ -24,7 +24,7 @@
                              <div class="col-md-4">
 
                                     <div class="main-search-input">
-                                        <input type="search" placeholder="Enter city" aria-label="City" name='city' value="{{ city }}" />
+                                        <input type="search" placeholder="Enter city" aria-label="City" name='city' value="{{ city }}" id = "city" />
                                     </div>
                             </div>
 
@@ -559,5 +559,15 @@
 
     </section>
     <!-- Fullwidth Section / End -->
+
+
+     <script>
+    function initMap() {
+      var input = document.getElementById('city');
+      var autocomplete = new google.maps.places.Autocomplete(input);
+    }
+  </script>
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF9FYfy-m0MhK7Q0H7zkauL0y8AuIRAOE&libraries=places&callback=initMap" async defer></script>
+
 
 {% endblock content %}

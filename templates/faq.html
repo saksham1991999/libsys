@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<!-- Titlebar
+================================================== -->
+<div id="titlebar">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>F.A.Q.</h2>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
+
+<!-- Container -->
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-10">
+{#			<h4 class="headline margin-top-0 margin-bottom-20">Toggles</h4>#}
+
+			<!-- Toggles Container -->
+			<div class="style-2">
+                {% for question in faqs %}
+				<!-- Toggle 1 -->
+				<div class="toggle-wrap">
+					<span class="trigger "><a href="#">{{ forloop.counter }}. {{ question.question }}<i class="sl sl-icon-plus"></i></a></span>
+					<div class="toggle-container" style="display: none;">
+						<p>{{ question.answer }}</p>
+					</div>
+				</div>
+                {% endfor %}
+
+			</div>
+			<!-- Toggles Container / End -->
+		</div>
+
+
+
+</div>
+</div>
+<!-- Wrapper / End -->
+
+
+
+<div id="mm-blocker" class="mm-slideout"></div>
+{% endblock content %}

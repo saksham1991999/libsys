@@ -2,8 +2,8 @@ from django.db import models
 from core.models import User
 
 Exam_Choices = (
-    ('E', 'Exam'),
-    ('R', 'Result'),
+    ('S', 'SSC'),
+    ('U', 'UPSC'),
 )
 
 class current_affair_categories(models.Model):
@@ -18,9 +18,14 @@ class current_affair_categories(models.Model):
 
 class previous_year(models.Model):
     exam_type = models.CharField(max_length=1, choices=Exam_Choices)
+
+    exam_category = models.CharField(max_length=70)
+    exam_title = models.CharField(max_length=100)
+
+    set = models.IntegerField()
     year = models.IntegerField()
-    questions = models.FileField()
-    answers = models.FileField()
+    questions = models.FileField(upload_to='previous_years')
+    answers = models.FileField(upload_to='previous_years')
 
     def __str__(self):
         title = self.exam_type + str(self.year)

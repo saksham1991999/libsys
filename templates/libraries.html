@@ -19,18 +19,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-
 					<h2>Listings</h2>
 					<span>Grid Layout With Sidebar</span>
-
-					<!-- Breadcrumbs -->
-					<nav id="breadcrumbs">
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li>Listings</li>
-						</ul>
-					</nav>
-
 				</div>
 			</div>
 		</div>
@@ -45,11 +35,27 @@
 
 		<div class="col-md-8">
 
-			<!-- Main Search Input -->
-			<div class="main-search-input margin-bottom-35">
-				<input type="text" class="ico-01" placeholder="Enter address e.g. street, city and state or zip" value=""/>
-				<button class="button">Search</button>
-			</div>
+            <!-- Row With Forms -->
+            <div class="row with-forms">
+                <form action="{% url 'core:libraries' %}">
+                 <div class="col-md-4">
+                        <div class="main-search-input">
+                            <input type="search" placeholder="Enter city" aria-label="City" name='city' value="{{ city }}" id = "city" />
+                        </div>
+                </div>
+
+                <!-- Main Search Input -->
+                <div class="col-md-8">
+                        <div class="main-search-input">
+                            <input type="search" placeholder="Search Using a Key Word" aria-label="Search" name='search' value="{{search_term}}"  />
+                            <button type = "submit" class="button"><i class="fa fa-search"></i></button>
+                        </div>
+                </div>
+                </form>
+            </div>
+            <!-- Row With Forms / End -->
+
+
 
 			<!-- Sorting / Layout Switcher -->
 			<div class="row margin-bottom-15">
@@ -172,6 +178,7 @@
 				<div class="widget margin-bottom-40">
 					<h3 class="margin-top-0 margin-bottom-35">Find New Home</h3>
 
+                    {% comment %}
 					<!-- Row -->
 					<div class="row with-forms">
 						<!-- Status -->
@@ -328,51 +335,30 @@
 					<!-- Area Range -->
 					<div class="range-slider">
 						<label>Area Range</label>
-						<div id="area-range" data-min="0" data-max="1500" data-unit="sq ft"></div>
+						<div id="area-range" data-min="0" data-max="100" data-unit="No of Seats"></div>
 						<div class="clearfix"></div>
 					</div>
-
+                    {% endcomment %}
 					<br>
 
 					<!-- Price Range -->
 					<div class="range-slider">
-						<label>Price Range</label>
-						<div id="price-range" data-min="0" data-max="400000" data-unit="$"></div>
+						<label>No of Seats Available</label>
+						<div id="price-range" data-min="0" data-max="100" data-unit=""></div>
 						<div class="clearfix"></div>
 					</div>
 
-
-
 					<!-- More Search Options -->
-					<a href="#" class="more-search-options-trigger margin-bottom-10 margin-top-30" data-open-title="Additional Features" data-close-title="Additional Features"></a>
+					<a href="#" class="more-search-options-trigger margin-bottom-10 margin-top-30" data-open-title="Amenities" data-close-title="Amenities"></a>
 
 					<div class="more-search-options relative">
 
 						<!-- Checkboxes -->
 						<div class="checkboxes one-in-row margin-bottom-10">
-
-							<input id="check-2" type="checkbox" name="check">
-							<label for="check-2">Air Conditioning</label>
-
-							<input id="check-3" type="checkbox" name="check">
-							<label for="check-3">Swimming Pool</label>
-
-							<input id="check-4" type="checkbox" name="check" >
-							<label for="check-4">Central Heating</label>
-
-							<input id="check-5" type="checkbox" name="check">
-							<label for="check-5">Laundry Room</label>
-
-
-							<input id="check-6" type="checkbox" name="check">
-							<label for="check-6">Gym</label>
-
-							<input id="check-7" type="checkbox" name="check">
-							<label for="check-7">Alarm</label>
-
-							<input id="check-8" type="checkbox" name="check">
-							<label for="check-8">Window Covering</label>
-
+                            {% for amenity in amenities %}
+							<input id="check-2" type="checkbox" name="check" value="{{ amenity.title }}">
+							<label for="check-2">{{ amenity.title }}</label>
+                            {% endfor %}
 						</div>
 						<!-- Checkboxes / End -->
 

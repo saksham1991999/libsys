@@ -27,18 +27,17 @@ def HomeView(request):
     return render(request, 'index.html', context)
 
 def LibrariesView(request):
-
-
-
-    b = models.library.objects.all()
     allLibraries = models.library.objects.all()
+    amenities = models.ammenities.objects.all()
     search_term = ''
+    city = ''
+
+    for i in range(10):
+        print()
+    print(request.GET)
 
     if 'city' in request.GET:
         city = request.GET['city']
-        for i in range(5):
-            print()
-        print("maa  chuda 1")
         allLibraries = allLibraries.filter(city__icontains=city)
 
     if 'seats' in request.GET:
@@ -47,14 +46,7 @@ def LibrariesView(request):
 
     if 'search' in request.GET:
         search_term = request.GET['search']
-        for i in allLibraries:
-            print(i)
-        print("maa  chuda 2")
-
         allLibraries = allLibraries.filter(name__icontains=search_term)
-        for i in allLibraries:
-            print(i)
-
 
     paginator = Paginator(allLibraries, 25)
     page = request.GET.get('page')
@@ -66,6 +58,8 @@ def LibrariesView(request):
         'libraries': allLibraries,
         'params': params,
         'search_term': search_term,
+        'amenities': amenities,
+        'city': city,
     }
     return render(request, 'libraries.html', context)
 
@@ -79,6 +73,7 @@ def ContactView(request):
                 'Message sent Successfully',
                 extra_tags='alert alert-success alert-dismissible fade show'
             )
+            return redirect('core:contact')
     else:
         form = forms.LibraryForm
         context = {
@@ -88,20 +83,91 @@ def ContactView(request):
 
 def LibraryView(request, id):
     library = get_object_or_404(models.library, id = id)
-    # print("--------------------------------------- Views" + str(library.views) + '----------------------------------' )
-    # library.views = int(library.views + 1)
-    # library.save()
+    library.views = int(library.views + 1)
+    library.save()
     images = models.library_images.objects.filter(library=library)
     ammenities = library.ammenities.all()
     payment_methods = library.payment_methods.all()
-    context = {
-        'library': library,
-        'images': images,
-        'ammenties': ammenities,
-        'payment_methods':payment_methods,
-    }
-    return render(request, 'library.html', context)
 
+    if request.method == 'POST':
+        form = forms.EnquiryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                'Enquiry sent Successfully',
+                extra_tags='alert alert-success alert-dismissible fade show'
+            )
+            return redirect('core:library', id)
+        else:
+            print(form.errors)
+            print(form.errors)
+            print(form.errors)
+            print(form.errors)
+            print(form.errors)
+            print(form.errors)
+            return redirect('core:library', id)
+
+    else:
+        enquiryform = forms.EnquiryForm()
+        context = {
+            'library': library,
+            'images': images,
+            'ammenties': ammenities,
+            'payment_methods':payment_methods,
+            'enquiryform': enquiryform,
+        }
+        return render(request, 'library.html', context)
+
+def BugReportView(request):
+    if request.method == 'POST':
+        form = forms.BugReportForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                'Enquiry sent Successfully',
+                extra_tags='alert alert-success alert-dismissible fade show'
+            )
+            return redirect('core:reportbug')
+        else:
+            print(form.errors)
+            return redirect('core:reportbug')
+
+    else:
+        bugreportform = forms.BugReportForm()
+        context = {
+            'bugreportform': bugreportform,
+        }
+        return render(request, 'reportbug.html', context)
+
+def TestimonialsView(request):
+    if request.method == 'POST':
+        form = forms.TestimonialForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                'Enquiry sent Successfully',
+                extra_tags='alert alert-success alert-dismissible fade show'
+            )
+            return redirect('core:testimonial')
+        else:
+            print(form.errors)
+            return redirect('core:testimonial')
+    else:
+        testimonialform = forms.TestimonialForm()
+        context = {
+            'testimonialform': testimonialform,
+        }
+        return render(request, 'testimonialform.html', context)
+
+def FAQView(request):
+    faqs = models.faq.objects.all()
+    context = {
+        'faqs':faqs,
+    }
+    return render(request, 'faq.html', context)
 @login_required
 def UserProfileView(request):
     if request.method == "POST":
@@ -257,8 +323,43 @@ def remove_from_bookmark(request, id):
         messages.info(request, "Property does not exist in your Bookmarks")
     return redirect("core:bookmarks")
 
+@login_required
+def ComparisonView(request):
+    libraries = models.comaprison.objects.all()[:3]
+    context = {
+        'libraries': libraries,
+    }
+    return render(request, 'comparelibraries.html', context)
 
+@login_required
+def add_to_compare(request, id):
+    library = get_object_or_404(models.library, id = id)
+    compare_qs = models.bookmark.objects.filter(user = request.user)
+    if compare_qs.exists():
+        compare = compare_qs[0]
+        if compare.libraries.filter(id = id).exists():
+            messages.info(request, "Library Already Bookmarked")
+        else:
+            compare.libraries.add(library)
+            messages.info(request, "Successfully Added to Compare")
+    else:
+        compare = models.bookmark.objects.create(user=request.user)
+        compare.libraries.add(library)
+        messages.info(request, "Successfully Added to Compare")
+    return redirect("core:compare")
 
+@login_required
+def remove_from_compare(request, id):
+    library = get_object_or_404(models.library, id = id)
+    bookmark_qs = models.bookmark.objects.filter(user = request.user)
+    if bookmark_qs.exists():
+        bookmark = bookmark_qs[0]
+        if bookmark.libraries.filter(id = id).exists():
+            bookmark.libraries.remove(library)
+            messages.info(request, "Property removed from your Bookmarks")
+    else:
+        messages.info(request, "Property does not exist in your Bookmarks")
+    return redirect("core:bookmarks")
 
 '''
 #API
