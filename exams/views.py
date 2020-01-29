@@ -13,18 +13,13 @@ def CurrentAffairsView(request):
     latest_current_affairs = all_current_affairs[:5]
     search_term = ''
 
-    for i in range(5):
-        print()
-    print(request.GET)
-
-
     if 'category' in request.GET:
         selected_category_title = request.GET.get('category')
         all_current_affairs = all_current_affairs.filter(category__title=selected_category_title)
 
     if 'search' in request.GET:
         search_term = request.GET['search']
-        all_current_affairs = all_current_affairs.filter(title__icontains=search_term)
+        all_current_affairs = all_current_affairs.filter(Q(title__icontains = search_term)| Q(library_description__icontains=search_term))
 
     paginator = Paginator(all_current_affairs, 5)
 

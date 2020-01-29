@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.core.paginator import Paginator
 from django.contrib import messages
 from datetime import date
-
+from django.db.models import Q
 
 from .models import post, like, comment, categories
 from .forms import CommentForm
@@ -20,7 +20,8 @@ def BlogHomeView(request):
     
     if 'search' in request.GET:
         search_term = request.GET['search']
-        all_posts = all_posts.filter(title__icontains = search_term)
+        print(search_term)
+        all_posts = all_posts.filter(Q(title__icontains = search_term)| Q(content__contains=search_term))
 
     paginator = Paginator(all_posts, 5)
 
@@ -39,6 +40,7 @@ def BlogHomeView(request):
 
 
 def BlogPostView(request, id):
+
     slug_post = get_object_or_404(post, id = id)
     comments = comment.objects.filter(post = slug_post)
     all_categories = categories.objects.all()

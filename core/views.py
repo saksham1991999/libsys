@@ -27,13 +27,19 @@ def HomeView(request):
     return render(request, 'index.html', context)
 
 def LibrariesView(request):
+
+
+
     b = models.library.objects.all()
     allLibraries = models.library.objects.all()
     search_term = ''
 
     if 'city' in request.GET:
         city = request.GET['city']
-        allLibraries = allLibraries.filter(city=city)
+        for i in range(5):
+            print()
+        print("maa  chuda 1")
+        allLibraries = allLibraries.filter(city__icontains=city)
 
     if 'seats' in request.GET:
         seats = request.GET['seats']
@@ -41,7 +47,14 @@ def LibrariesView(request):
 
     if 'search' in request.GET:
         search_term = request.GET['search']
-        allLibraries = allLibraries.filter(property_name__icontains= search_term, additional_features__icontains=search_term)
+        for i in allLibraries:
+            print(i)
+        print("maa  chuda 2")
+
+        allLibraries = allLibraries.filter(name__icontains=search_term)
+        for i in allLibraries:
+            print(i)
+
 
     paginator = Paginator(allLibraries, 25)
     page = request.GET.get('page')
