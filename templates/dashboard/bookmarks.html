@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Titlebar
+================================================== -->
+<div id="titlebar">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>Bookmarked Listings</h2>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
+<div class="container">
+	<div class="row">
+
+
+		{% include 'dashboard/dashboardsidenav.html' %}
+		<div class="col-md-8">
+			<table class="manage-table bookmarks-table responsive-table">
+
+				<tr>
+					<th><i class="fa fa-file-text"></i> Library</th>
+					<th></th>
+				</tr>
+
+            {% if bookmark %}
+                {% for library in bookmark.libraries.all %}
+				<!-- Item #1 -->
+				<tr>
+					<td class="title-container">
+						<img src="{{ library.main_image.url }}" alt="">
+						<div class="title">
+							<h4><a href="{% url 'core:library' library.id %}">{{ library.name }}</a></h4>
+							<span>{{ library.city }}</span>
+							<span class="table-property-price">Rs {{ library.min_monthly_charges }}</span>
+						</div>
+					</td>
+					<td class="action">
+						<a href="{% url 'core:removefrombookmarks' library.id %}" class="delete"><i class="fa fa-remove"></i> Remove</a>
+					</td>
+				</tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+					<td>
+							<h4><a href="#">You Haven't Bookmarked any Property !</a></h4>
+
+					</td>
+				</tr>
+            {% endif %}
+
+			</table>
+		</div>
+
+	</div>
+</div>
+
+{% endblock content %}
