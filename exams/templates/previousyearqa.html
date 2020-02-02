@@ -48,8 +48,8 @@
 						<div>{{ file.exam_title }}</div>
 						<div>{{ file.set }}</div>
 						<div>{{ file.year }}</div>
-						<div><a  href="{% url 'exams:download' file.questions.url %}" download> Download</a></div>
-                        <div><a  href="{% url 'exams:download' file.answers.url %}" download> Download</a></div>
+						<div><a  href="{% url 'exams:download' file.id 1 %}" download> Download</a></div>
+                        <div><a  href="{% url 'exams:download' file.id 2 %}" download> Download</a></div>
 					</li>
                     {% endfor %}
 

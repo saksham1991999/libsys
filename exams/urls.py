@@ -11,6 +11,6 @@ urlpatterns = [
     path('current-affairs', views.CurrentAffairsView, name='currentaffairs'),
     path('current-affairs/<int:id>', views.CurrentAffairView, name='currentaffair'),
     path('previous-years', views.PreviousYearQAView, name='previousyear'),
-    path('download/<path>', views.download, name='download'),
+    path('download/<int:id>/<int:no>', views.download, name='download'),
 
 ]

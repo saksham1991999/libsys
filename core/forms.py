@@ -17,6 +17,9 @@ class LibraryForm(forms.ModelForm):
             'closing_time': forms.TimeInput(),
             'ammenities': forms.SelectMultiple(),
             'payment_methods': forms.SelectMultiple(),
+            'mobile_no': forms.TextInput(attrs={'pattern':'[0-9]{10}'}),
+            'pincode': forms.TextInput(attrs={'pattern': '[0-9]{6}'}),
+
         }
 
 class UserProfileForm(forms.ModelForm):
@@ -30,15 +33,24 @@ class EnquiryForm(forms.ModelForm):
     class Meta:
         model = models.enquiry
         fields = '__all__'
-        # labels =
-        # widgets =
+        labels = {
+            'preferred_joining_date': _('Preferred Joining Date (YYYY-MM-DD)'),
+        }
+        widgets = {
+            # 'preferred_joining_date': forms.DateInput(),
+            'contact_no': forms.TextInput(attrs={'pattern':'[0-9]{10}'}),
+            'preferred_joining_date': forms.TextInput(attrs={'pattern': '[2][0][0-9]{2}-[0-9]{2}-[0-9]{2}'}),
+
+        }
 
 class BugReportForm(forms.ModelForm):
     class Meta:
         model = models.bug_report
         fields = '__all__'
         # labels =
-        # widgets =
+        widgets = {
+            'contact_no': forms.TextInput(attrs={'pattern':'[0-9]{10}'})
+        }
 
 class TestimonialForm(forms.ModelForm):
     class Meta:
@@ -50,4 +62,9 @@ class TestimonialForm(forms.ModelForm):
 class NewsletterForm(forms.ModelForm):
     class Meta:
         model = models.newsletter
+        fields = '__all__'
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = models.Contact
         fields = '__all__'

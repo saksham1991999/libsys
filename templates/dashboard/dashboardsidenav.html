@@ -7,16 +7,16 @@
                 <ul class="my-account-nav">
                     <li class="sub-nav-title">Manage Account</li>
                     <li><a href="{% url 'core:userprofile' %}" {% if request.resolver_match.view_name == 'core:userprofile' %}class="current"{% endif %}><i class="sl sl-icon-user"></i> My Profile</a></li>
-                    <li><a href="{% url 'core:bookmarks' %}" {% if request.resolver_match.view_name == 'core:bookmarks' %}class="current"{% endif %}><i class="sl sl-icon-star"></i> Bookmarked Listings</a></li>
+{#                    <li><a href="{% url 'core:bookmarks' %}" {% if request.resolver_match.view_name == 'core:bookmarks' %}class="current"{% endif %}><i class="sl sl-icon-star"></i> Bookmarked Listings</a></li>#}
                 </ul>
 
-            {% if request.user.is_owner %}
+
                 <ul class="my-account-nav">
                     <li class="sub-nav-title">Manage Listings</li>
-                    <li><a href="{% url 'core:mylibraries' %}" {% if request.resolver_match.view_name == 'core:myproperties' %}class="current"{% endif %}><i class="sl sl-icon-docs"></i> My Properties</a></li>
-                    <li><a href="{% url 'core:addlibrary' %}" {% if request.resolver_match.view_name == 'core:addproperty' %}class="current"{% endif %}><i class="sl sl-icon-action-redo"></i> Submit New Property</a></li>
+                    <li><a href="{% url 'core:mylibraries' %}" {% if request.resolver_match.view_name == 'core:myproperties' %}class="current"{% endif %}><i class="sl sl-icon-docs"></i> My Libraries</a></li>
+                    <li><a href="{% url 'core:addlibrary' %}" {% if request.resolver_match.view_name == 'core:addproperty' %}class="current"{% endif %}><i class="sl sl-icon-action-redo"></i> Submit New Library</a></li>
                 </ul>
-            {% endif %}
+
 
                 <ul class="my-account-nav">
                     <li><a href="{% url 'account_change_password' %}"><i class="sl sl-icon-lock"></i> Change Password</a></li>

@@ -12,6 +12,9 @@ router.register('library', views.LibraryView, basename='library')
 urlpatterns = [
     #path('api/', include(router.urls)),
     path('', views.HomeView, name='home'),
+    path('terms-and-conditions', views.TandCView, name='tnc'),
+    path('privacy-policy', views.PrivacyPolicyView, name='privacypolicy'),
+
     path('contact', views.ContactView, name='contact'),
     path('submit-testimonial', views.TestimonialsView, name='testimonial'),
     path('report-bug', views.BugReportView, name='reportbug'),

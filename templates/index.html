@@ -35,6 +35,7 @@
                                         <input type="search" placeholder="Search Using a Key Word" aria-label="Search" name='search' value="{{search_term}}"  />
                                         <button type = "submit" class="button"><i class="fa fa-search"></i></button>
                                     </div>
+                            </div>
                                 </form>
                             </div>
 
@@ -202,6 +203,7 @@
                 <div class="carousel">
 
                 {% for library in libraries %}
+                    {% if library.visible and library.verified %}
                     <!-- Listing Item -->
                     <div class="carousel-item">
                         <div class="listing-item compact">
@@ -231,6 +233,7 @@
                         </div>
                     </div>
                     <!-- Listing Item / End -->
+                    {% endif %}
                 {% endfor %}
 
                 </div>
@@ -422,27 +425,27 @@
     <section class="fullwidth margin-top-95 margin-bottom-0">
 
         <!-- Box Headline -->
-        <h3 class="headline-box">Articles & Tips</h3>
+        <h3 class="headline-box">Current Affairs</h3>
 
         <div class="container">
             <div class="row">
-
+            {% for currentaffair in currentaffairs %}
                 <div class="col-md-4">
 
                     <!-- Blog Post -->
                     <div class="blog-post">
 
                         <!-- Img -->
-                        <a href="blog-post.html" class="post-img">
-                            <img src="images/blog-post-01.jpg" alt="">
+                        <a href="{% url 'exams:currentaffair' currentaffair.id %}" class="post-img">
+                            <img src="{{ currentaffair.image.url }}" alt="">
                         </a>
 
                         <!-- Content -->
                         <div class="post-content">
-                            <h3><a href="#">8 Tips to Help You Finding New Home</a></h3>
-                            <p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
+                            <h3><a href="#">{{ currentaffair.title }}</a></h3>
+                            <p>{{ currentaffair.get_short_content }}</p>
 
-                            <a href="blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+                            <a href="{% url 'exams:currentaffair' currentaffair.id %}" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
 
                     </div>
@@ -450,51 +453,7 @@
 
                 </div>
 
-                <div class="col-md-4">
-
-                    <!-- Blog Post -->
-                    <div class="blog-post">
-
-                        <!-- Img -->
-                        <a href="blog-post.html" class="post-img">
-                            <img src="images/blog-post-02.jpg" alt="">
-                        </a>
-
-                        <!-- Content -->
-                        <div class="post-content">
-                            <h3><a href="#">Bedroom Colors You'll Never Regret</a></h3>
-                            <p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
-
-                            <a href="blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-
-                    </div>
-                    <!-- Blog Post / End -->
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <!-- Blog Post -->
-                    <div class="blog-post">
-
-                        <!-- Img -->
-                        <a href="blog-post.html" class="post-img">
-                            <img src="images/blog-post-03.jpg" alt="">
-                        </a>
-
-                        <!-- Content -->
-                        <div class="post-content">
-                            <h3><a href="#">What to Do a Year Before Buying Apartment</a></h3>
-                            <p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
-
-                            <a href="blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-
-                    </div>
-                    <!-- Blog Post / End -->
-
-                </div>
+                {% endfor %}
 
             </div>
         </div>
@@ -505,7 +464,7 @@
     <!-- Flip banner -->
     <a href="listings-half-map-grid-standard.html" class="flip-banner parallax" data-background="images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
         <div class="flip-banner-content">
-            <h2 class="flip-visible">We help people and homes find each other</h2>
+            <h2 class="flip-visible">Subscribe to Our Newsletter</h2>
             <h2 class="flip-hidden">Browse Properties <i class="sl sl-icon-arrow-right"></i></h2>
         </div>
     </a>
@@ -515,44 +474,26 @@
     <section class="fullwidth margin-top-105 margin-bottom-0 padding-bottom-80 padding-top-95" data-background-color="#f7f7f7">
 
         <!-- Box Headline -->
-        <h3 class="headline-box">What Our Clients Say</h3>
+        <h3 class="headline-box">What Our Students Say</h3>
 
         <div class="container">
             <div class="row">
 
                 <div class="col-md-12">
-                    <div class="testimonials-subtitle">We collect reviews from our customers so you can get an honest opinion of what an apartment is really like!</div>
+                    <div class="testimonials-subtitle">We collect reviews from our Students so you can get an honest opinion of what a Library is really like!</div>
                 </div>
 
+                {% for testimonial in testimonials %}
                 <div class="col-md-4">
                     <div class="testimonial-box">
-                        <div class="testimonial">Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.</div>
+                        <div class="testimonial">{{ testimonial.description }}</div>
                         <div class="testimonial-author">
                             <img src="images/happy-client-01.jpg" alt="">
-                            <h4>Saksham<span>Rented Apartment</span></h4>
+                            <h4>{{ testimonial.name }}</h4>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="testimonial-box">
-                        <div class="testimonial">Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.</div>
-                        <div class="testimonial-author">
-                            <img src="images/happy-client-02.jpg" alt="">
-                            <h4>Mayank<span>Bought House</span></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="testimonial-box">
-                        <div class="testimonial">Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.</div>
-                        <div class="testimonial-author">
-                            <img src="images/happy-client-03.jpg" alt="">
-                            <h4>Rohit<span>Sold Apartment</span></h4>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
         </div>

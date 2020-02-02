@@ -6,8 +6,24 @@ from datetime import date
 import os
 from django.conf import settings
 from django.http import HttpResponse, Http404
+from django.db.models import Q
 
 from . import models, forms
+
+from io import BytesIO
+from django.http import HttpResponse
+from django.template.loader import get_template
+
+# from xhtml2pdf import pisa
+
+def render_to_pdf(template_src, context_dict={}):
+    template = get_template(template_src)
+    html  = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
 
 
 def CurrentAffairsView(request):
@@ -22,7 +38,7 @@ def CurrentAffairsView(request):
 
     if 'search' in request.GET:
         search_term = request.GET['search']
-        all_current_affairs = all_current_affairs.filter(Q(title__icontains = search_term)| Q(library_description__icontains=search_term))
+        all_current_affairs = all_current_affairs.filter(Q(title__icontains = search_term)| Q(description__icontains=search_term))
 
     paginator = Paginator(all_current_affairs, 5)
 
@@ -107,22 +123,12 @@ def PreviousYearQAView(request):
     }
     return render(request, 'previousyearqa.html', context)
 
-def download(request, path):
-    file_path = os.path.join(settings.MEDIA_ROOT, path)
-
-    with open('path/test.pdf', 'rb') as pdf:
-        response = HttpResponse(pdf.read())
-        reponse['content_type'] = 'application/pdf'
-        response['Content-Disposition'] = 'attachment;filename=file.pdf'
-        return response
-
-
-
-
-
-    if os.path.exists(file_path):
-        with open(file_path, 'rb') as fh:
-            response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
-            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
-            return response
-    raise Http404
+def download(request, id, no):
+    test = models.previous_year(id = id)
+    if no == 1:
+        pdf = test.questions
+    else:
+        pdf = test.answers
+    print(pdf)
+    pdf = render_to_pdf('events/certi1.html', )
+    return HttpResponse(pdf, content_type='application/pdf')

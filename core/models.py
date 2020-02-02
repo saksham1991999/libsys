@@ -207,3 +207,16 @@ class TermsAndConditions(models.Model):
 
     class Meta:
         verbose_name_plural = 'Terms And Conditions'
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    subject = models.CharField(max_length=150)
+    message = models.TextField()
+
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Contact Us Form'

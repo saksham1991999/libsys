@@ -14,7 +14,7 @@
 
 				<a href="{% url 'core:libraries' %}" class="back-to-listings"></a>
 				<div class="property-title">
-					<h2>{{ library.name }} <span class="property-badge">For Sale</span></h2>
+					<h2>{{ library.name }} <span class="property-badge">Library</span></h2>
 					<span>
 						<a href="#location" class="listing-address">
 							<i class="fa fa-map-marker"></i>
@@ -24,8 +24,11 @@
 				</div>
 
 				<div class="property-pricing">
+                    {%  if library.min_monthly_charges %}
 					<div class="property-price">Rs {{ library.min_monthly_charges }}</div>
-					<div class="sub-price">Rs {{ library.min_price_range }} - {{ library.max_price_range }}</div>
+                    {% endif %}
+
+					<div class="sub-price">{% if library.min_price_range %}Rs {{ library.min_price_range }}{% endif %} {% if library.max_price_range %} - Rs{{ library.max_price_range }}{% endif %}</div>
 				</div>
 
 
@@ -197,9 +200,8 @@
 
 				<!-- Widget -->
 				<div class="widget margin-bottom-30">
-					<button class="widget-button with-tip" data-tip-content="Print"><i class="sl sl-icon-printer"></i><div class="tip-content">Print</div></button>
-					<button class="widget-button with-tip" data-tip-content="Add to Bookmarks"><i class="fa fa-star-o"></i><div class="tip-content">Add to Bookmarks</div></button>
-					<button class="widget-button with-tip compare-widget-button" data-tip-content="Add to Compare"><i class="icon-compare"></i><div class="tip-content">Add to Compare</div></button>
+					<a href="{% url 'core:addtobookmarks' library.id %}"><button class="widget-button with-tip" data-tip-content="Add to Bookmarks"><i class="fa fa-star-o"></i><div class="tip-content">Add to Bookmarks</div></button></a>
+                    <a href="{% url 'core:addtocompare' library.id %}"><button class="widget-button with-tip compare-widget-button" data-tip-content="Add to Compare"><i class="icon-compare"></i><div class="tip-content">Add to Compare</div></button></a>
 					<div class="clearfix"></div>
 				</div>
 				<!-- Widget / End -->
@@ -212,7 +214,7 @@
 					<!-- Enquiry Widget -->
 					<div class="agent-widget">
 						<div class="agent-title">
-							<div class="agent-photo"><img src="images/agent-avatar.jpg" alt=""></div>
+							<div class="agent-photo"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt=""></div>
 							<div class="agent-details">
 								<h4><a href="#">Jennie Wilson</a></h4>
 								<span><i class="sl sl-icon-call-in"></i>(123) 123-456</span>

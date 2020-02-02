@@ -84,6 +84,7 @@
 			<!-- Listings -->
 			<div class="listings-container list-layout">
                 {% for library in libraries %}
+                    {% if library.verified and library.visible %}
 				<!-- Listing Item -->
 				<div class="listing-item">
 
@@ -135,7 +136,7 @@
 				</div>
 				<!-- Listing Item / End -->
 
-
+{% endif %}
 				{% endfor %}
 
 			</div>

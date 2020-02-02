@@ -18,11 +18,17 @@ from rest_framework.parsers import JSONParser
 from rest_framework import viewsets
 
 from . import models, forms, serializers
+from exams.models import current_affair
+
 
 def HomeView(request):
-    libraries = models.library.objects.all()[:4]
+    libraries = models.library.objects.all()[:6]
+    currentaffairs = current_affair.objects.all()[:3]
+    testimonials = models.testimonial.objects.all()[:3]
     context = {
         'libraries': libraries,
+        'currentaffairs':currentaffairs,
+        'testimonials':testimonials,
     }
     return render(request, 'index.html', context)
 
@@ -65,19 +71,24 @@ def LibrariesView(request):
 
 def ContactView(request):
     if request.method == 'POST':
-        form = forms.LibraryForm(request.POST)
+        form = forms.ContactForm(request.POST)
+        print(request.POST)
         if form.is_valid():
             form.save()
+            print('Form saved Successfully')
             messages.success(
                 request,
                 'Message sent Successfully',
                 extra_tags='alert alert-success alert-dismissible fade show'
             )
-            return redirect('core:contact')
+        else:
+            print(form.errors)
+            print('form not valid')
+        return redirect('core:contact')
     else:
-        form = forms.LibraryForm
+        form = forms.ContactForm()
         context = {
-            'form':form,
+            'contactform': form,
         }
         return render(request, 'contact.html', context)
 
@@ -168,6 +179,7 @@ def FAQView(request):
         'faqs':faqs,
     }
     return render(request, 'faq.html', context)
+
 @login_required
 def UserProfileView(request):
     if request.method == "POST":
@@ -232,11 +244,13 @@ def editLibrary(request, id):
 
 @login_required
 def addLibrary(request):
+    # user = models.User.objects.get(email = request.user.email)
     if request.method == "POST":
         form = forms.LibraryForm(request.POST, request.FILES)
         if form.is_valid():
             new_form = form.save(commit = False)
             new_form.owner = request.user
+
             new_form.save()
             messages.success(
                             request,
@@ -360,6 +374,16 @@ def remove_from_compare(request, id):
     else:
         messages.info(request, "Property does not exist in your Bookmarks")
     return redirect("core:bookmarks")
+
+def TandCView(request):
+    context = {}
+    return render(request, 't&c.html', context)
+
+def PrivacyPolicyView(request):
+    context = {}
+    return render(request, 'privacypolicy.html', context)
+
+
 
 '''
 #API
