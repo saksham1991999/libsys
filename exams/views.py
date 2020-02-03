@@ -13,10 +13,10 @@ from . import models, forms
 from io import BytesIO
 from django.http import HttpResponse
 from django.template.loader import get_template
+from xhtml2pdf import pisa
 
-# from xhtml2pdf import pisa
 
-def render_to_pdf(template_src, context_dict={}):
+def render_to_pdf(template_src, context_dict=None):
     template = get_template(template_src)
     html  = template.render(context_dict)
     result = BytesIO()
@@ -123,12 +123,17 @@ def PreviousYearQAView(request):
     }
     return render(request, 'previousyearqa.html', context)
 
+
 def download(request, id, no):
-    test = models.previous_year(id = id)
+    test = get_object_or_404(models.previous_year, id=id)
     if no == 1:
-        pdf = test.questions
+        # pdf = test.questions.url
+        pdf = open('C:/Users/hp/Desktop/Django Projects/libsys/media_root/previous_years/softeng.pdf', 'r', encoding="utf-8",errors='ignore')
     else:
         pdf = test.answers
     print(pdf)
-    pdf = render_to_pdf('events/certi1.html', )
-    return HttpResponse(pdf, content_type='application/pdf')
+    return HttpResponse(pdf.read(), content_type='application/pdf')
+
+def testView(request):
+    context = {}
+    return render(request, 'MCQ/test.html', context)
