@@ -8,6 +8,7 @@
 <div id="wrapper" class="mm-page mm-slideout">
 
 
+
 <!-- Titlebar
 ================================================== -->
 <div id="titlebar">
@@ -23,39 +24,47 @@
 	</div>
 </div>
 
+<!-- Featured -->
+    <div class="container">
+        <div class="row">
+            <!-- Carousel -->
+            <div class="col-md-12">
+                <div class="carousel">
 
-    {% for currentaffair in currentaffairs %}
+                {% for currentaffair in currentaffairs %}
+                    <!-- Listing Item -->
+                    <div class="carousel-item">
+                        <div class="listing-item compact">
 
-        <div class="listing-item compact">
+                            <a href="{{ currentaffair.file.url }}" class="listing-img-container">
 
-        <a href="{{ currentaffair.file.url }}" class="listing-img-container">
+                                <div class="listing-badges">
+                                    <span class="featured">{{ currentaffair.month }}</span>
+                                    <span>{{ currentaffair.year }}</span>
+                                </div>
 
-            <div class="listing-badges">
-                <span class="featured">{{ currentaffair.month }}</span>
-                <span>{{ currentaffair.year }}</span>
+                                <div class="listing-img-content">
+                                    <span class="listing-compact-title">{{ currentaffair.title }}</span>
+
+                                    <ul class="listing-hidden-content">
+
+                                    </ul>
+                                </div>
+
+                                <img src="{{ currentaffair.image.url }}" alt="">
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Listing Item / End -->
+
+                {% endfor %}
+
+                </div>
             </div>
-
-            <div class="listing-img-content">
-                <span class="listing-compact-title">{{ currentaffair.title }}</span>
-
-                <ul class="listing-hidden-content">
-                    <li> <a href="{{ currentaffair.file.url }}" download> Download </a></li>
-
-                </ul>
-            </div>
-
-            <img src="{{ library.main_image.url }}" alt="">
-        </a>
-
         </div>
-    {% endfor %}
-
-
-
-
-
-
-
+    </div>
+    <!-- Featured / End -->
 
 </div>
 <!-- Wrapper / End -->

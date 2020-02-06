@@ -26,7 +26,7 @@
 
 <!-- Content
 ================================================== -->
-<div class="container">
+<div class="container" style="margin-bottom: 50px">
 	<div class="row">
 		<div class="col-md-12">
 
@@ -48,7 +48,7 @@
 						<div>{{ file.exam_title }}</div>
 						<div>{{ file.set }}</div>
 						<div>{{ file.year }}</div>
-						<div><a  href="{% url 'exams:download' file.id 1 %}" target="_blank"> Download</a></div>
+						<div><a  href="{{ file.questions.url }}" download> Download</a></div>
                         <div><a  href="{{ file.answers.url }}" download> Download</a></div>
 					</li>
                     {% endfor %}
