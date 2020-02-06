@@ -424,7 +424,7 @@
     <section class="fullwidth margin-top-95 margin-bottom-0">
 
         <!-- Box Headline -->
-        <h3 class="headline-box">Current Affairs</h3>
+        <h3 class="headline-box">Latest from Blog</h3>
 
         <div class="container">
             <div class="row">
@@ -436,15 +436,15 @@
 
                         <!-- Img -->
                         <a href="{% url 'blog:post' post.id %}" class="post-img">
-                            <img src="{{ currentaffair.image.url }}" alt="">
+                            <img src="{{ post.main_image.url }}" alt="">
                         </a>
 
                         <!-- Content -->
                         <div class="post-content">
-                            <h3><a href="#">{{ currentaffair.title }}</a></h3>
-                            <p>{{ currentaffair.get_short_content }}</p>
+                            <h3><a href="#">{{ post.title }}</a></h3>
+                            <p>{{ post.get_shortest_content }}</p>
 
-                            <a href="{% url 'exams:currentaffair' currentaffair.id %}" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+                            <a href="{% url 'blog:post' post.id %}" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
 
                     </div>
@@ -463,8 +463,15 @@
     <!-- Flip banner -->
     <a href="listings-half-map-grid-standard.html" class="flip-banner parallax" data-background="images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
         <div class="flip-banner-content">
-            <h2 class="flip-visible">INPUT BOX</h2>
-            <h2 class="flip-hidden">Browse Properties <i class="sl sl-icon-arrow-right"></i></h2>
+            <h2 class="flip-visible">Subscribe to our Newsletter</h2>
+            <h2 class="flip-hidden">
+                <div class="col-md-8">
+                    <div class="main-search-input">
+                        <input type="search" placeholder="Search Using a Key Word" aria-label="Search" name='search' value="{{search_term}}"  />
+                        <button type = "submit" class="button">Submit</button>
+                    </div>
+                </div>
+            </h2>
         </div>
     </a>
     <!-- Flip banner / End -->

@@ -18,16 +18,17 @@ from rest_framework.parsers import JSONParser
 from rest_framework import viewsets
 
 from . import models, forms, serializers
-from exams.models import current_affair
+from blog.models import post
 
 
 def HomeView(request):
     libraries = models.library.objects.all()[:6]
-    currentaffairs = current_affair.objects.all()[:3]
+    blogposts = post.objects.all()[:3]
     testimonials = models.testimonial.objects.all()[:3]
+
     context = {
         'libraries': libraries,
-        'currentaffairs':currentaffairs,
+        'blogposts':blogposts,
         'testimonials':testimonials,
     }
     return render(request, 'index.html', context)
