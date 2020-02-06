@@ -112,12 +112,6 @@ def LibraryView(request, id):
             )
             return redirect('core:library', id)
         else:
-            print(form.errors)
-            print(form.errors)
-            print(form.errors)
-            print(form.errors)
-            print(form.errors)
-            print(form.errors)
             return redirect('core:library', id)
 
     else:

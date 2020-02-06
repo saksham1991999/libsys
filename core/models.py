@@ -93,6 +93,10 @@ class library(models.Model):
     class Meta:
         verbose_name_plural = 'Libraries'
 
+    def get_images(self):
+        images = library_images.objects.filter(library = self)
+        return images
+
 class library_images(models.Model):
     image = models.ImageField()
     library = models.ForeignKey(library, on_delete=models.CASCADE)
