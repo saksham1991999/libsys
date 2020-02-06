@@ -180,6 +180,13 @@ def FAQView(request):
     }
     return render(request, 'faq.html', context)
 
+def FAQDetailView(request, id):
+    faq = get_object_or_404(models.faq, id=id)
+    context = {
+        'faq':faq,
+    }
+    return render(request, 'faqdetail.html', context)
+
 @login_required
 def UserProfileView(request):
     if request.method == "POST":

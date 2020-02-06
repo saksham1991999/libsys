@@ -199,6 +199,19 @@ class faq(models.Model):
     class Meta:
         verbose_name_plural = 'FAQ'
 
+    def get_short_content(self):
+        if len(self.answer) > 500:
+            content = self.answer[:500]
+            return content
+        else:
+            return self.answer
+
+    def if_short_content(self):
+        if len(self.answer) > 500:
+            return True
+        else:
+            return False
+
 class TermsAndConditions(models.Model):
     content = models.TextField()
 

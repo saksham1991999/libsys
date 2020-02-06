@@ -19,6 +19,7 @@ urlpatterns = [
     path('submit-testimonial', views.TestimonialsView, name='testimonial'),
     path('report-bug', views.BugReportView, name='reportbug'),
     path('faq', views.FAQView, name='faq'),
+    path('faq/<int:id>', views.FAQDetailView , name='faqdetail'),
 
     path('libraries', views.LibrariesView, name='libraries'),
     path('library/<int:id>', views.LibraryView, name='library'),
