@@ -41,9 +41,15 @@
 					<div class="toggle-container" style="display: none;">
 						<p>
 							{{ faq.get_short_content }}
-							{% if faq.if_short_content %} <a href="{% url 'core:faqdetail" faq.id %}> Read More ... </a>{% endif %}
 
-						</p>
+
+							{% if faq.if_short_content == 'True' %}
+                                <a href="{% url 'core:faqdetail' faq.id %}">
+                                    &nbsp; Read More ...
+                                </a>
+                            {% endif %}
+                        </p>
+
 					</div>
 				</div>
                 {% endfor %}

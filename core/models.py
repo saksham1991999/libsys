@@ -208,7 +208,7 @@ class faq(models.Model):
 
     def if_short_content(self):
         if len(self.answer) > 500:
-            return True
+            return 'True'
         else:
             return False
 
