@@ -91,9 +91,13 @@
                             <a href="{% url 'blog:home' %}" {% if request.resolver_match.view_name == 'blog:home' %}class="current"{% endif %}>Blog</a>
 						</li>
                         <li>
+                            <a href="{% url 'exams:previousyear' %}" {% if request.resolver_match.view_name == 'exams:previousyear' %}class="current"{% endif %}>Previous Year Q/A</a>
+						</li>
+                        <li>
                             <a href="{% url 'exams:currentaffairs' %}" {% if request.resolver_match.view_name == 'exams:currentaffairs' %}class="current"{% endif %}>Current Affairs</a>
 						</li>
-						<li><a href="{% url 'core:contact' %}" {% if request.resolver_match.view_name == 'core:contact' %}class="current"{% endif %}>Contact Us</a>
+						<li>
+                            <a href="{% url 'core:contact' %}" {% if request.resolver_match.view_name == 'core:contact' %}class="current"{% endif %}>Contact Us</a>
 						</li>
 <!-- 						<li class="right-side-menu-item"><a href="login-register.html" class="sign-in"><i class="fa fa-user"></i> Log In / Register</a></li> -->
 					</ul>
@@ -128,6 +132,9 @@
 						</li>
                         <li>
                             <a href="{% url 'blog:home' %}" {% if request.resolver_match.view_name == 'blog:home' %}class="current"{% endif %}>Blog</a>
+						</li>
+                        <li>
+                            <a href="{% url 'exams:previousyear' %}" {% if request.resolver_match.view_name == 'exams:previousyear' %}class="current"{% endif %}>Previous Year Q/A</a>
 						</li>
                         <li>
                             <a href="{% url 'exams:currentaffairs' %}" {% if request.resolver_match.view_name == 'exams:currentaffairs' %}class="current"{% endif %}>Current Affairs</a>

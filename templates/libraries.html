@@ -37,7 +37,7 @@
 
             <!-- Row With Forms -->
             <div class="row with-forms">
-                <form action="{% url 'core:libraries' %}">
+                 <form action="{% url 'core:libraries' %}">
                  <div class="col-md-4">
                         <div class="main-search-input">
                             <input type="search" placeholder="Enter city" aria-label="City" name='city' value="{{ city }}" id = "city" />
@@ -67,18 +67,15 @@
 
 						<div class="sort-by-select">
 							<select data-placeholder="Default order" class="chosen-select-no-single" >
-								<option>Default Order</option>
-								<option>Price Low to High</option>
-								<option>Price High to Low</option>
-								<option>Newest Properties</option>
-								<option>Oldest Properties</option>
+								<option> Default Order</option>
+								<option><a href="?Order=low_to_high">Price Low to High</a></option>
+                                <option><a href="?Order=high_to_low">Price High to Low</a></option>
+                                <option><a href="?Order=nearest">Nearest Libraries</a></option>
 							</select>
 						</div>
 					</div>
 				</div>
-
-
-			</div>
+            </div>
 
 
 			<!-- Listings -->
