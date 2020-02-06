@@ -10,8 +10,7 @@ urlpatterns = [
     #path('previous-years', views.HomeView, name='previous_year'),
     path('test', views.testView, name='test'),
     path('current-affairs', views.CurrentAffairsView, name='currentaffairs'),
-    path('current-affairs/<int:id>', views.CurrentAffairView, name='currentaffair'),
     path('previous-years', views.PreviousYearQAView, name='previousyear'),
-    path('download/<int:id>/<int:no>', views.download, name='download'),
+    # path('download/<int:id>/<int:no>', views.download, name='download'),
 
 ]

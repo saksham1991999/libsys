@@ -429,14 +429,14 @@
 
         <div class="container">
             <div class="row">
-            {% for currentaffair in currentaffairs %}
+            {% for post in blogposts %}
                 <div class="col-md-4">
 
                     <!-- Blog Post -->
                     <div class="blog-post">
 
                         <!-- Img -->
-                        <a href="{% url 'exams:currentaffair' currentaffair.id %}" class="post-img">
+                        <a href="{% url 'blog:post' post.id %}" class="post-img">
                             <img src="{{ currentaffair.image.url }}" alt="">
                         </a>
 

@@ -22,3 +22,4 @@ def added_to_compare(user, id):
             if qs.libraries.filter(id=id).exists():
                 return True
     return False
+

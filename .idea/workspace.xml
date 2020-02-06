@@ -2,12 +2,209 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9172565b-09dd-42c4-97ae-5cced3ebe5e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exams/templates/MCQ/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templatetags/library_template_tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/templatetags/library_template_tag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exams/templates/previousyearqa.html" beforeDir="false" afterPath="$PROJECT_DIR$/exams/templates/previousyearqa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/templates/currentaffair.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exams/templates/currentaffairs.html" beforeDir="false" afterPath="$PROJECT_DIR$/exams/templates/currentaffairs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exams/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exams/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/exams/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libsys/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/libsys/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libsys/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/libsys/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.2.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.2.dist-info/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.2.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.2.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.2.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.2.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.2.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/el/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/el/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/el/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/el/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hu/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hu/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hu/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/id/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/id/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/id/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/id/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ja/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ja/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ja/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ja/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ko/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ko/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ko/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ko/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nb/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nb/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nb/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nb/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hans/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hans/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/checks.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/checks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/af/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/af/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/af/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/af/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/en_GB/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/en_GB/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/en_GB/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/en_GB/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ga/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/hu/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/hu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/hu/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/hu/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/is/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/kk/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ko/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ko/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ko/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ko/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ml/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ml/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ml/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ml/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/nb/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/nb/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/nb/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/nb/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ro/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/ro/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sk/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/locale/sr_Latn/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/options.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/SelectBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/SelectBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/cancel.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/cancel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/collapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/collapse.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/collapse.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/inlines.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/inlines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/urlify.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/urlify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/widgets/url.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/templates/admin/widgets/url.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/ga/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/ga/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/ga/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/ga/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sr/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sr/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sr/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/sr/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/uk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/uk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/uk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admindocs/locale/uk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/id/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/id/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/id/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/id/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/zh_Hans/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/zh_Hans/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/migrations/0011_update_proxy_permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/migrations/0011_update_proxy_permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/ga/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/ga/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/ga/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/ga/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/uk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/uk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/uk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/contenttypes/locale/uk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/hu/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/hu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/hu/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/hu/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/ko/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/ko/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/ko/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/ko/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/nb/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/nb/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/nb/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/nb/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/flatpages/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/static/gis/js/OLMapWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/static/gis/js/OLMapWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ga/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ga/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ga/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ga/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/hu/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/hu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/hu/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/hu/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ka/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ka/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ka/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ka/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ml/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ml/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ml/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/humanize/locale/ml/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/aggregates/general.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/aggregates/general.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/aggregates/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/aggregates/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/fields/hstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/fields/hstore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/fields/jsonb.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/fields/jsonb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/fields/ranges.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/fields/ranges.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/ka/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/ka/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/ka/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/ka/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/kk/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/kk/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/kk/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/kk/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/pl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/lookups.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/lookups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/postgres/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/ga/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/ga/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/ga/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/ga/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/redirects/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/ga/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/ga/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/ga/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/ga/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sessions/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/ga/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/ga/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/ga/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/ga/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/sr_Latn/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/sr_Latn/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/sr_Latn/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sites/locale/sr_Latn/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/checks/model_checks.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/checks/model_checks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/commands/migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/commands/migrate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/ddl_references.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/ddl_references.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/oracle/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/oracle/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/oracle/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/oracle/schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/postgresql/introspection.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/postgresql/introspection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/postgresql/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/postgresql/schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/deletion.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/deletion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/expressions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/expressions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/related_descriptors.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/related_descriptors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/reverse_related.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/reverse_related.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/functions/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/functions/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/indexes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/indexes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/sql/compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/sql/compiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/sql/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/sql/query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/forms/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/forms/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/http/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/http/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/template/defaultfilters.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/template/defaultfilters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/urls/resolvers.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/urls/resolvers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/autoreload.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/autoreload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/dateformat.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/dateformat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/encoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/encoding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/html.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/html.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/translation/reloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/translation/reloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/views/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/views/debug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/django-admin.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/django-admin.exe" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,67 +232,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/exams/templates/MCQ/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding>
-                <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static_in_venv/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="9604" column="9" selection-start-line="9604" selection-start-column="9" selection-end-line="9604" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exams/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+            <state relative-caret-position="663">
+              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
-                <element signature="e#882#2033#0" />
-                <element signature="e#1141#1292#0" />
-                <element signature="e#1334#1500#0" />
-                <element signature="e#1768#1974#0" />
-                <element signature="e#2076#3660#0" />
-                <element signature="e#2329#3355#0" />
-                <element signature="e#2375#3100#0" />
-                <element signature="e#2462#3100#0" />
-                <element signature="e#3127#3355#0" />
-                <element signature="e#3374#3660#0" />
-                <element signature="e#3426#3598#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exams/urls.py">
+        <entry file="file://$PROJECT_DIR$/exams/templates/currentaffairs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="646">
+              <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -104,19 +265,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exams/templates/new_base.html">
+        <entry file="file://$PROJECT_DIR$/exams/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="25" selection-start-column="25" selection-end-column="25" />
+            <state relative-caret-position="153">
+              <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libsys/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exams/templates/currentaffairs.html">
+        <entry file="file://$PROJECT_DIR$/exams/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="110" column="18" selection-end-line="171" />
+            <state relative-caret-position="68">
+              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7412">
+              <caret line="436" selection-start-line="436" selection-end-line="436" />
             </state>
           </provider>
         </entry>
@@ -148,6 +333,7 @@
       <find>print</find>
       <find>book</find>
       <find>current a</find>
+      <find>curr</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -175,10 +361,7 @@
         <option value="$PROJECT_DIR$/blog/templates/blogpost.html" />
         <option value="$PROJECT_DIR$/templates/dashboard/addlibrary.html" />
         <option value="$PROJECT_DIR$/templates/account/base.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/faq.html" />
-        <option value="$PROJECT_DIR$/exams/models.py" />
-        <option value="$PROJECT_DIR$/core/templatetags/library_template_tag.py" />
         <option value="$PROJECT_DIR$/core/urls.py" />
         <option value="$PROJECT_DIR$/templates/t&amp;c.html" />
         <option value="$PROJECT_DIR$/templates/privacypolicy.html" />
@@ -190,24 +373,31 @@
         <option value="$PROJECT_DIR$/templates/contact.html" />
         <option value="$PROJECT_DIR$/core/forms.py" />
         <option value="$PROJECT_DIR$/templates/library.html" />
-        <option value="$PROJECT_DIR$/exams/templates/currentaffairs.html" />
         <option value="$PROJECT_DIR$/exams/templates/currentaffair.html" />
         <option value="$PROJECT_DIR$/templates/navbar.html" />
         <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/templates/dashboard/dashboardsidenav.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/exams/templates/previousyearqa.html" />
-        <option value="$PROJECT_DIR$/exams/views.py" />
-        <option value="$PROJECT_DIR$/exams/urls.py" />
         <option value="$PROJECT_DIR$/static_in_venv/css/style.css" />
         <option value="$PROJECT_DIR$/exams/templates/MCQ/test.html" />
+        <option value="$PROJECT_DIR$/libsys/urls.py" />
+        <option value="$PROJECT_DIR$/libsys/settings.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/core/templatetags/library_template_tag.py" />
+        <option value="$PROJECT_DIR$/exams/models.py" />
+        <option value="$PROJECT_DIR$/exams/views.py" />
+        <option value="$PROJECT_DIR$/exams/admin.py" />
+        <option value="$PROJECT_DIR$/exams/urls.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/exams/templates/currentaffairs.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="699" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectId" id="1X2MVRZSrXWM4vZGkqd21F3xdCp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -216,12 +406,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="libsys" type="b2602c69:ProjectViewProjectNode" />
               <item name="libsys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="libsys" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="libsys" type="b2602c69:ProjectViewProjectNode" />
@@ -234,11 +430,20 @@
               <item name="exams" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="libsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="libsys" type="462c0819:PsiDirectoryNode" />
+              <item name="libsys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="libsys" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -346,11 +551,16 @@
       <workItem from="1580282522508" duration="21638000" />
       <workItem from="1580403582820" duration="18559000" />
       <workItem from="1580619957397" duration="15329000" />
+      <workItem from="1580797713563" duration="735000" />
+      <workItem from="1580824500589" duration="254000" />
+      <workItem from="1580900171667" duration="616000" />
+      <workItem from="1580901899759" duration="4216000" />
+      <workItem from="1580968698652" duration="583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65497000" />
+    <option name="totallyTimeSpent" value="71901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,11 +576,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.9010989" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22995462" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.4551495" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.29623568" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3289689" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32569557" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
@@ -424,23 +634,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/exams/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/scripts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="13" column="90" lean-forward="true" selection-start-line="13" selection-start-column="90" selection-end-line="13" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -521,26 +714,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templatetags/cart_template_tags.py" />
-    <entry file="file://$PROJECT_DIR$/core/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templatetags/library_template_tag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/t&amp;c.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -610,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/library.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="214" column="46" lean-forward="true" selection-start-line="214" selection-start-column="46" selection-end-line="214" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/sql/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
@@ -631,29 +797,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exams/templates/currentaffair.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="146" column="64" lean-forward="true" selection-start-line="146" selection-start-column="64" selection-end-line="146" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/exams/templates/currentaffair.html" />
     <entry file="file://$PROJECT_DIR$/templates/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="97" column="104" selection-start-line="97" selection-start-column="104" selection-end-line="97" selection-end-column="104" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="482" column="156" selection-start-line="482" selection-start-column="156" selection-end-line="482" selection-end-column="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libsys/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard/dashboardsidenav.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -702,23 +852,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exams/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libsys/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1292">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -790,10 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/static_in_venv/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="163268">
+          <caret line="9604" column="9" selection-start-line="9604" selection-start-column="9" selection-end-line="9604" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -804,55 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exams/templates/currentaffairs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="110" column="18" selection-end-line="171" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exams/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <element signature="e#882#2033#0" />
-            <element signature="e#1141#1292#0" />
-            <element signature="e#1334#1500#0" />
-            <element signature="e#1768#1974#0" />
-            <element signature="e#2076#3660#0" />
-            <element signature="e#2329#3355#0" />
-            <element signature="e#2375#3100#0" />
-            <element signature="e#2462#3100#0" />
-            <element signature="e#3127#3355#0" />
-            <element signature="e#3374#3660#0" />
-            <element signature="e#3426#3598#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exams/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_in_venv/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9604" column="9" selection-start-line="9604" selection-start-column="9" selection-end-line="9604" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exams/templates/MCQ/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="374">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding>
             <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -860,6 +948,115 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-219">
+          <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/library.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3638">
+          <caret line="214" column="46" selection-start-line="214" selection-start-column="46" selection-end-line="214" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/scripts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templatetags/library_template_tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libsys/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="39" column="63" lean-forward="true" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams/templates/currentaffairs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exams/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7412">
+          <caret line="436" selection-start-line="436" selection-end-line="436" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libsys/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
         </state>
       </provider>
     </entry>

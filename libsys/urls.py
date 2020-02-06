@@ -10,6 +10,8 @@ urlpatterns = [
     path('', include('core.urls', namespace = 'core')),
     path('blog/', include('blog.urls', namespace = 'blog')),
     path('exams/', include('exams.urls', namespace = 'exams')),
+
+    path('djga/', include('google_analytics.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,

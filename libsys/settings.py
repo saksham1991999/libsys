@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
+    'google_analytics',
 
     'core',
     'exams',
@@ -148,3 +149,6 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_USERNAME_REQUIRED = False
 AUTH_USER_MODEL = 'core.User'
 
+GOOGLE_ANALYTICS = {
+    'google_analytics_id': '157733287',
+}
