@@ -27,7 +27,6 @@
                                         <input type="search" placeholder="Enter city" aria-label="City" name='city' value="{{ city }}" id = "city" />
                                     </div>
                             </div>
-
                             <!-- Main Search Input -->
                             <div class="col-md-8">
 
@@ -39,7 +38,7 @@
                                 </form>
                             </div>
 
-                        </div>
+
                         <!-- Row With Forms / End -->
 
                         <!-- Browse Jobs -->
@@ -259,12 +258,12 @@
                         <div class="icon-container">
                             <i class="im im-icon-Office"></i>
                             <div class="icon-links">
-                                <a href="listings-grid-standard-with-sidebar.html">To Join</a>
+                                <a href="#">To Join</a>
                             </div>
                         </div>
 
                         <h3>Libraries</h3>
-                        <p>We help students find libraries nearby to make their studies smooth and confortable</p>
+                        <p>We help students find libraries nearby to make their studies smooth and comfortable</p>
                     </div>
                 </div>
 
@@ -275,7 +274,7 @@
                         <div class="icon-container">
                             <i class="im im-icon-Home-2"></i>
                             <div class="icon-links">
-                                <a href="listings-grid-standard-with-sidebar.html">To Join</a>
+                                <a href="">To Join</a>
                                 
                             </div>
                         </div>
@@ -292,7 +291,7 @@
                         <div class="icon-container">
                             <i class="im im-icon-Car-3"></i>
                             <div class="icon-links">
-                                <a href="listings-grid-standard-with-sidebar.html">To View</a>
+                                <a href="">To View</a>
                                
                             </div>
                         </div>
@@ -309,7 +308,7 @@
                         <div class="icon-container">
                             <i class="im im-icon-Clothing-Store"></i>
                             <div class="icon-links">
-                                <a href="listings-grid-standard-with-sidebar.html">Popular</a>
+                                <a href="">Popular</a>
                                 
                             </div>
                         </div>
@@ -340,7 +339,7 @@
                     <div class="col-lg-6 col-sm-8">
                         <h2>It's your journey to a better future. We're here to help you.</h2>
                         <p>We’re full-service, agents who know how to find appropriate libraries for you. We use online tools with an unmatched search capability to make you smarter and faster.</p>
-                        <a href="listings-list-with-sidebar.html" class="button margin-top-25">Get Started</a>
+                        <a href="#" class="button margin-top-25">Get Started</a>
                     </div>
                 </div>
 
@@ -461,7 +460,7 @@
 
 
     <!-- Flip banner -->
-    <a href="listings-half-map-grid-standard.html" class="flip-banner parallax" data-background="images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
+    <form href="#" class="flip-banner parallax" data-background="images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
         <div class="flip-banner-content">
             <h2 class="flip-visible">Subscribe to our Newsletter</h2>
             <h2 class="flip-hidden">
@@ -473,7 +472,7 @@
                 </div>
             </h2>
         </div>
-    </a>
+    </form>
     <!-- Flip banner / End -->
 
     <!-- Fullwidth Section -->
@@ -506,7 +505,22 @@
 
     </section>
     <!-- Fullwidth Section / End -->
+<script>
+var x = document.getElementById("demo");
 
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 
      <script>
     function initMap() {
@@ -515,6 +529,5 @@
     }
   </script>
      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF9FYfy-m0MhK7Q0H7zkauL0y8AuIRAOE&libraries=places&callback=initMap" async defer></script>
-
 
 {% endblock content %}
