@@ -222,7 +222,7 @@ def editLibrary(request, id):
                 form.save()
                 messages.success(
                     request,
-                    'Property Details Saved Successfully',
+                    'library Details Saved Successfully',
                     extra_tags='alert alert-success alert-dismissible fade show'
                 )
                 return redirect('core:mylibraries')
@@ -237,7 +237,7 @@ def editLibrary(request, id):
     else:
         messages.success(
             request,
-            'You are not allowed to edit the Property Details',
+            'You are not allowed to edit the library Details',
             extra_tags='alert alert-success alert-dismissible fade show'
         )
         return redirect('core:mylibraries')
@@ -272,13 +272,13 @@ def deleteLibrary(request, id):
         library.delete()
         messages.success(
             request,
-            'Property Deleted Successfully',
+            'library Deleted Successfully',
             extra_tags='alert alert-success alert-dismissible fade show'
         )
     else:
         messages.error(
             request,
-            'You can not delete the property',
+            'You can not delete the library',
             extra_tags='alert alert-danger alert-dismissible fade show'
         )
     return redirect('core:mylibraries')
@@ -314,7 +314,7 @@ def add_to_bookmark(request, id):
     if bookmark_qs.exists():
         bookmark = bookmark_qs[0]
         if bookmark.libraries.filter(id = id).exists():
-            messages.info(request, "Property Already Bookmarked")
+            messages.info(request, "library Already Bookmarked")
         else:
             bookmark.libraries.add(library)
             messages.info(request, "Successfully Bookmarked")
@@ -332,18 +332,47 @@ def remove_from_bookmark(request, id):
         bookmark = bookmark_qs[0]
         if bookmark.libraries.filter(id = id).exists():
             bookmark.libraries.remove(library)
-            messages.info(request, "Property removed from your Bookmarks")
+            messages.info(request, "library removed from your Bookmarks")
     else:
-        messages.info(request, "Property does not exist in your Bookmarks")
+        messages.info(request, "library does not exist in your Bookmarks")
     return redirect("core:bookmarks")
+
 
 @login_required
 def ComparisonView(request):
-    libraries = models.comaprison.objects.all()[:3]
-    context = {
-        'libraries': libraries,
-    }
-    return render(request, 'comparelibraries.html', context)
+    compare_qs = models.comaprison.objects.filter(user=request.user)
+    if compare_qs.exists():
+        compare_qs = compare_qs[0]
+        libraries = compare_qs.libraries.all()
+        if len(libraries):
+            library1 = None
+            library2 = None
+            library3 = None
+            try:
+                library1 = libraries[0]
+            except:
+                pass
+            try:
+                library2 = libraries[1]
+            except:
+                pass
+            try:
+                library3 = libraries[2]
+            except:
+                pass
+
+            ammenities = models.ammenities.objects.all()
+            context = {
+                'libraries': libraries,
+                'library1':library1,
+                'library2':library2,
+                'library3':library3,
+                'ammenities':ammenities,
+            }
+            return render(request, 'dashboard/comparelibraries.html', context)
+    else:
+        messages.info(request, "Add to libraries to Compare list to compare")
+        return redirect('core:libraries')
 
 @login_required
 def add_to_compare(request, id):
@@ -370,9 +399,9 @@ def remove_from_compare(request, id):
         bookmark = bookmark_qs[0]
         if bookmark.libraries.filter(id = id).exists():
             bookmark.libraries.remove(library)
-            messages.info(request, "Property removed from your Bookmarks")
+            messages.info(request, "library removed from your Bookmarks")
     else:
-        messages.info(request, "Property does not exist in your Bookmarks")
+        messages.info(request, "library does not exist in your Bookmarks")
     return redirect("core:bookmarks")
 
 def TandCView(request):

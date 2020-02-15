@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="mm-page mm-slideout">
+
+
+    <!-- Titlebar
+    ================================================== -->
+    <div id="titlebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Comparing Libraries</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Content
+    ================================================== -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Compare List -->
+                <div class="compare-list-container">
+                    <ul id="compare-list">
+
+                        <li class="compare-list-libraries">
+                            <div class="blank-div"></div>
+
+                            {% if library1 %}
+                            <div>
+
+                                    <div class="clp-img">
+                                        <a href="{% url 'core:library' library1.id %}"><img src="{{ library1.main_image.url }}" alt=""></a>
+                                        <a href="{% url 'core:removefromcompare' library1.id %}"><span class="remove-from-compare"><i class="fa fa-close"></i></span></a>
+                                    </div>
+
+                                    <div class="clp-title">
+                                        <h4>{{ library1.name }}</h4>
+                                        <span>{{ library1.min_monthly_charges }}</span>
+                                    </div>
+
+                            </div>
+                            {% endif %}
+
+                            {% if library2 %}
+                            <div>
+                                <a href="#">
+                                    <div class="clp-img">
+                                        <a href="{% url 'core:library' library2.id %}"><img src="{{ library2.main_image.url }}" alt=""></a>
+                                        <a href="{% url 'core:removefromcompare' library2.id %}"><span class="remove-from-compare"><i class="fa fa-close"></i></span></a>
+                                    </div>
+                                    <div class="clp-title">
+                                        <h4>{{ library2.name }}</h4>
+                                        <span>{{ library2.min_monthly_charges }}</span>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endif %}
+
+                            {% if library3 %}
+                            <div>
+                                <a href="#">
+                                    <div class="clp-img">
+                                        <a href="{% url 'core:library' library3.id %}"><img src="{{ library3.main_image.url }}" alt=""></a>
+                                        <a href="{% url 'core:removefromcompare' library3.id %}"><span class="remove-from-compare"><i class="fa fa-close"></i></span></a>
+                                    </div>
+                                    <div class="clp-title">
+                                        <h4>{{ library3.name }}</h4>
+                                        <span>{{ library3.min_monthly_charges }}</span>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endif %}
+                        </li>
+
+                        <li>
+                            <div>No of Seats</div>
+                            <div>{{ library1.no_of_seats }}</div>
+                            <div>{{ library2.no_of_seats }}</div>
+                            <div>{{ library3.no_of_seats }}</div>
+
+                        </li>
+
+                        <li>
+                            <div>Opening Time</div>
+                            <div>{{ library1.opening_time }}</div>
+                            <div>{{ library2.opening_time }}</div>
+                            <div>{{ library3.opening_time }}</div>
+                        </li>
+
+                        <li>
+                            <div>Closing Time</div>
+                            <div>{{ library1.closing_time }}</div>
+                            <div>{{ library2.closing_time }}</div>
+                            <div>{{ library3.closing_time }}</div>
+                        </li>
+
+                        <li>
+                            <div>Non Refundable Charges</div>
+                            <div>{{ library1.non_refundable_charges }}</div>
+                            <div>{{ library2.non_refundable_charges }}</div>
+                            <div>{{ library3.non_refundable_charges }}</div>
+                        </li>
+
+                        {% for ammenity in ammenities %}
+                        <li>
+                            <div>{{ ammenity.title }}</div>
+                            <div>{% if ammenity in library1.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>
+                            <div>{% if ammenity in library2.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>
+                            <div>{% if ammenity in library3.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>
+
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+                <!-- Compare List / End -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    <!-- Wrapper / End -->
+
+
+
+    <div id="mm-blocker" class="mm-slideout"></div>
+
+
+
+
+
+
+
+
+{% endblock content %}

@@ -38,7 +38,7 @@ urlpatterns = [
     path('add-to-bookmarks/<int:id>', views.add_to_bookmark, name='addtobookmarks'),
     path('remove-from-bookmarks/<int:id>', views.remove_from_bookmark, name='removefrombookmarks'),
 
-    path('comparison-list', views.ComparisonView, name='compare'),
+    path('compare-libraries', views.ComparisonView, name='compare'),
     path('add-to-compare/<int:id>', views.add_to_compare, name='addtocompare'),
     path('remove-from-compare/<int:id>', views.remove_from_compare, name='removefromcompare'),
 
