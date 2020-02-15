@@ -189,8 +189,6 @@ def UserProfileView(request):
         user = models.User(email=request.user.email)
         form = forms.UserProfileForm(request.POST, instance=request.user)
         # fname = form[]
-        print('fsddddddddddddddddddddddddddddddddddfdsfdsfdsfdsfdsfds')
-        print(form)
         if form.is_valid():
             form.save()
             messages.success(
