@@ -65,11 +65,12 @@
 					<ul id="responsive">
 
 						<li><a href="{% url 'core:home' %}" {% if request.resolver_match.view_name == 'core:home' %}class="current"{% endif %}>Home</a>
-							<ul>
+						<!--	<ul>
 								<li><a href="index.html">About</a></li>
 								<li><a href="index-2.html">Services</a></li>
 								<li><a href="index-3.html">Search</a></li>
 							</ul>
+							-->
 						</li>
 
 						<li><a href="{% url 'core:libraries' %}" {% if request.resolver_match.view_name == 'core:libraries' %}class="current"{% endif %}>Libraries</a>
