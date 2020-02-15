@@ -9,7 +9,9 @@
 
         <div class="container">
             <div class="row">
+
                 <div class="col-md-12">
+
 
                     <div class="search-container">
 
@@ -27,15 +29,25 @@
                                         <input type="search" placeholder="Enter city" aria-label="City" name='city' value="{{ city }}" id = "city" />
                                     </div>
                             </div>
+                                 <div class="col-md-1">
+                                  <form action="" method="get" id="demo">
+                                <button onclick="showPosition()"  type="button" style="width: 70px;height: 58px;">
+                                    <span class="im im-icon-Location-2"></span></button>
+                                      
+                            </form>
+                            </div>
                             <!-- Main Search Input -->
-                            <div class="col-md-8">
+                            <div class="col-md-7">
 
                                     <div class="main-search-input">
                                         <input type="search" placeholder="Search Using a Key Word" aria-label="Search" name='search' value="{{search_term}}"  />
                                         <button type = "submit" class="button"><i class="fa fa-search"></i></button>
                                     </div>
                             </div>
-                                </form>
+                               </form>
+
+
+
                             </div>
 
 
@@ -54,6 +66,8 @@
                     </div>
 
                 </div>
+
+
             </div>
         </div>
     </div>
@@ -466,7 +480,7 @@
             <h2 class="flip-hidden">
                 <div class="col-md-8" style="align-items: center">
                     <div class="main-search-input" style="margin-left: 240px">
-                        <input type="email" placeholder="Enter your email" aria-label="Email" name='Email' value="{{search_term}}"  />
+                        <input type="email" placeholder="Enter your email" aria-label="Email" name='Email'   />
                         <button type = "submit" class="button">Submit</button>
                     </div>
                 </div>
