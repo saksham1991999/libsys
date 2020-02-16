@@ -122,7 +122,16 @@ def LibraryView(request, id):
             'ammenties': ammenities,
             'payment_methods':payment_methods,
             'enquiryform': enquiryform,
+
         }
+        # if request.user.is_authenticated():
+        # bookmarkedlibraries = models.bookmark.objects.filter(user=request.user)[0]
+        # bookmarkedlibraries = bookmarkedlibraries.libraries
+        #
+        # comparinglibraries = models.comaprison.objects.filter(user=request.user)[0]
+        # comparinglibraries = comparinglibraries.libraries
+        # context['bookmarkedlibraries'] = bookmarkedlibraries
+        # context['comparinglibraries'] = comparinglibraries
         return render(request, 'library.html', context)
 
 def BugReportView(request):
