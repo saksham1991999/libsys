@@ -5,7 +5,7 @@
 {% block content %}
 
     <!-- Banner -->
-    <div class="parallax" data-background="{%  static 'images/home-parallax-2.jpg' %}" data-color="#36383e" data-color-opacity="0.5" data-img-width="2500" data-img-height="1600">
+    <div class="parallax" data-background="{% static 'images/MAIN_image.webp' %}" data-color="#36383e" data-color-opacity="0.5" data-img-width="2500" data-img-height="1600">
 
         <div class="container">
             <div class="row">
@@ -23,19 +23,13 @@
 
                             <form action="{% url 'core:libraries' %}">
 
-                             <div class="col-md-4">
+                             <div class="col-md-4" style="margin-bottom: 70px">
 
                                     <div class="main-search-input">
                                         <input type="search" placeholder="Enter city" aria-label="City" name='city' value="{{ city }}" id = "city" />
                                     </div>
                             </div>
-                                 <div class="col-md-1">
-                                  <form action="" method="get" id="demo">
-                                <button onclick="showPosition()"  type="button" style="width: 70px;height: 58px;">
-                                    <span class="im im-icon-Location-2"></span></button>
-                                      
-                            </form>
-                            </div>
+
                             <!-- Main Search Input -->
                             <div class="col-md-7">
 
@@ -60,7 +54,7 @@
 
                         <!-- Announce -->
                         <div class="announce">
-                            We’ve 1000 Libraries for you!
+                            We’ve 1000+ Libraries for you!
                         </div>
 
                     </div>
@@ -87,11 +81,25 @@
                     <div class="icon-box-1 alternative">
 
                         <div class="icon-container">
-                            <i class="im im-icon-Checked-User"></i>
+                            <i class="fas fa-search"></i>
                         </div>
 
                         <h3>Library Finder</h3>
-                        <p>See who specializes in your area, has the most reviews and the right experience to meet your needs.</p>
+                        <p>Displays all the libraries in India to ease down the work of the students .</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <!-- Icon Box -->
+
+                    <div class="icon-box-1 alternative">
+
+                        <div class="icon-container">
+                           <i class="fas fa-book-reader"></i>
+                        </div>
+
+                        <h3>Libraries</h3>
+                        <p>Expecting more than 1000 libraries will join us each year. We help students find an ideal place to study.</p>
                     </div>
                 </div>
 
@@ -100,24 +108,11 @@
                     <div class="icon-box-1 alternative">
 
                         <div class="icon-container">
-                            <i class="im im-icon-Cloud-Computer"></i>
+                           <i class="fas fa-wifi"></i>
                         </div>
 
-                        <h3>Modern Technology</h3>
-                        <p>More than 10,000 customers buy or sell a home with us each year. We help people and homes find each together.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <!-- Icon Box -->
-                    <div class="icon-box-1 alternative">
-
-                        <div class="icon-container">
-                            <i class="im im-icon-Idea"></i>
-                        </div>
-
-                        <h3>Home Designs Ideas</h3>
-                        <p>Our specialists can help you get started on that home project. Find paint colors, that perfect tile and more. </p>
+                        <h3>Library Amenities</h3>
+                        <p>Our specialists help you to find best libraries near you as per your requirements and comfort for best results. </p>
                     </div>
                 </div>
 
@@ -136,59 +131,7 @@
         data-img-height="505">
 
         <!-- Counters -->
-        <div id="counters">
-            <div class="container">
 
-                <div class="row">
-
-                    <div class="counter-boxes-inside-parallax">
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="counter-box">
-                                <div class="counter-box-icon">
-                                    <i class="im im-icon-Home-2"></i>
-                                    <span class="counter">1942</span>
-                                    <p>Libraries</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="counter-box">
-                                <div class="counter-box-icon">
-                                    <i class="im im-icon-Money-2"></i>
-                                    <span class="counter">500</span>
-                                    <p>Cities</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="counter-box">
-                                <div class="counter-box-icon">
-                                    <i class="im im-icon-Business-ManWoman"></i>
-                                    <span class="counter">389</span>
-                                    <p>Library Owners</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="counter-box last">
-                                <div class="counter-box-icon">
-                                    <i class="im im-icon-Suitcase"></i>
-                                    <span class="counter">163</span>
-                                    <p>Average Seats per Library</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
         <!-- Counters / End -->
 
         <!-- Flip banner -->
@@ -270,7 +213,7 @@
                     <div class="icon-box-1">
 
                         <div class="icon-container">
-                            <i class="im im-icon-Office"></i>
+                           <i class="fas fa-book"></i>
                             <div class="icon-links">
                                 <a href="#">To Join</a>
                             </div>
@@ -286,15 +229,15 @@
                     <div class="icon-box-1">
 
                         <div class="icon-container">
-                            <i class="im im-icon-Home-2"></i>
+                             <i class="fas fa-blog"></i>
                             <div class="icon-links">
                                 <a href="">To Join</a>
                                 
                             </div>
                         </div>
 
-                        <h3>Books</h3>
-                        <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim donec vel lectus vel felis.</p>
+                        <h3>Blogs</h3>
+                        <p>View our latest blogs from our website to know more about us.</p>
                     </div>
                 </div>
 
@@ -303,15 +246,15 @@
                     <div class="icon-box-1">
 
                         <div class="icon-container">
-                            <i class="im im-icon-Car-3"></i>
+                           <i class="fas fa-newspaper"></i>
                             <div class="icon-links">
                                 <a href="">To View</a>
                                
                             </div>
                         </div>
 
-                        <h3>Newspaper Clippings</h3>
-                        <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim donec vel lectus vel felis.</p>
+                        <h3>Current Affairs</h3>
+                        <p>Keeps you up to date with the latest news.</p>
                     </div>
                 </div>
 
@@ -320,15 +263,15 @@
                     <div class="icon-box-1">
 
                         <div class="icon-container">
-                            <i class="im im-icon-Clothing-Store"></i>
+                           <i class="fas fa-pen-fancy"></i>
                             <div class="icon-links">
                                 <a href="">Popular</a>
                                 
                             </div>
                         </div>
 
-                        <h3>Magazines</h3>
-                        <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim donec vel lectus vel felis.</p>
+                        <h3>Previous Year Q/A</h3>
+                        <p>Get access to previous year question papers on our website for regular practice.</p>
                     </div>
                 </div>
 
@@ -339,7 +282,7 @@
 
     <!-- Parallax -->
     <div class="parallax margin-bottom-70"
-        data-background="images/listings-parallax.jpg"
+        data-background="{% static 'images/image-intro.jpg' %}"
         data-color="#36383e"
         data-color-opacity="0.7"
         data-img-width="800"
@@ -352,7 +295,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-sm-8">
                         <h2>It's your journey to a better future. We're here to help you.</h2>
-                        <p>We’re full-service, agents who know how to find appropriate libraries for you. We use online tools with an unmatched search capability to make you smarter and faster.</p>
+                        <p>We’re full-service, agents who know how to find appropriate libraries for you. We use online tools with an unmatched search capability to make you smarter and faster.We help you find libraraies near you to make your studies comfotable. We provide you,all the information for the libraries,their amenities seating arrangements and all other facilities.  </p>
                         <a href="#" class="button margin-top-25">Get Started</a>
                     </div>
                 </div>
@@ -377,7 +320,7 @@
             <div class="col-md-4">
 
                 <!-- Image Box -->
-                <a href="{% url 'core:libraries' %}?city=gurgaon" class="img-box" data-background-image="images/popular-location-01.jpg">
+                <a href="{% url 'core:libraries' %}?city=gurgaon" class="img-box" data-background-image="{% static 'images/national.jpg' %}">
 
                     <!-- Badge -->
                     <div class="listing-badges">
@@ -386,7 +329,7 @@
 
                     <div class="img-box-content visible">
                         <h4>National Library of India</h4>
-                        <span>_ Seats</span>
+                        <span>1000 Seats</span>
                     </div>
                 </a>
 
@@ -395,10 +338,10 @@
             <div class="col-md-8">
 
                 <!-- Image Box -->
-                <a href="{% url 'core:libraries' %}?city=noida" class="img-box" data-background-image="images/popular-location-02.jpg">
+                <a href="{% url 'core:libraries' %}?city=noida" class="img-box" data-background-image="{% static 'images/delhipublic.jpg' %}">
                     <div class="img-box-content visible">
                         <h4>Delhi Public Library</h4>
-                        <span>_ Seats</span>
+                        <span>500 Seats</span>
                     </div>
                 </a>
 
@@ -407,10 +350,10 @@
             <div class="col-md-8">
 
                 <!-- Image Box -->
-                <a href="{% url 'core:libraries' %}?city=mumbai" class="img-box" data-background-image="images/popular-location-03.jpg">
+                <a href="{% url 'core:libraries' %}?city=mumbai" class="img-box" data-background-image="{% static 'images/saraswati.jpg' %}">
                     <div class="img-box-content visible">
                         <h4>Saraswati Mahal Library</h4>
-                        <span>_ Seats</span>
+                        <span> 450 Seats</span>
                     </div>
                 </a>
 
@@ -419,10 +362,10 @@
             <div class="col-md-4">
 
                 <!-- Image Box -->
-                <a href="{% url 'core:libraries' %}?city=delhi" class="img-box" data-background-image="images/popular-location-04.jpg">
+                <a href="{% url 'core:libraries' %}?city=delhi" class="img-box" data-background-image="{% static 'images/anna.jpg' %}">
                     <div class="img-box-content visible">
                         <h4>Anna Centenary Library</h4>
-                        <span>_ Seats</span>
+                        <span>350 Seats</span>
                     </div>
                 </a>
 

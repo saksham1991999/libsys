@@ -128,7 +128,7 @@ def LibraryView(request, id):
         # bookmarkedlibraries = models.bookmark.objects.filter(user=request.user)[0]
         # bookmarkedlibraries = bookmarkedlibraries.libraries
         #
-        # comparinglibraries = models.comaprison.objects.filter(user=request.user)[0]
+        # comparinglibraries = models.comparison.objects.filter(user=request.user)[0]
         # comparinglibraries = comparinglibraries.libraries
         # context['bookmarkedlibraries'] = bookmarkedlibraries
         # context['comparinglibraries'] = comparinglibraries
@@ -349,11 +349,11 @@ def remove_from_bookmark(request, id):
 
 @login_required
 def ComparisonView(request):
-    compare_qs = models.comaprison.objects.filter(user=request.user)
+    compare_qs = models.comparison.objects.filter(user=request.user)
     if compare_qs.exists():
         compare_qs = compare_qs[0]
         libraries = compare_qs.libraries.all()
-        if len(libraries):
+        if len(libraries) > 1:
             library1 = None
             library2 = None
             library3 = None
@@ -379,6 +379,9 @@ def ComparisonView(request):
                 'ammenities':ammenities,
             }
             return render(request, 'dashboard/comparelibraries.html', context)
+        else:
+            messages.info(request, "You just have 1 Library in Compare List")
+            return redirect('core:libraries')
     else:
         messages.info(request, "Add to libraries to Compare list to compare")
         return redirect('core:libraries')
@@ -386,32 +389,33 @@ def ComparisonView(request):
 @login_required
 def add_to_compare(request, id):
     library = get_object_or_404(models.library, id = id)
-    compare_qs = models.bookmark.objects.filter(user = request.user)
+    compare_qs = models.comparison.objects.filter(user = request.user)
     if compare_qs.exists():
         compare = compare_qs[0]
         if compare.libraries.filter(id = id).exists():
-            messages.info(request, "Library Already Bookmarked")
+            messages.info(request, "Library Already added to Compare List")
         else:
             compare.libraries.add(library)
             messages.info(request, "Successfully Added to Compare")
+        return redirect('core:compare')
     else:
-        compare = models.bookmark.objects.create(user=request.user)
+        compare = models.comparison.objects.create(user=request.user)
         compare.libraries.add(library)
         messages.info(request, "Successfully Added to Compare")
-    return redirect("core:compare")
+        return redirect("core:compare")
 
 @login_required
 def remove_from_compare(request, id):
     library = get_object_or_404(models.library, id = id)
-    bookmark_qs = models.bookmark.objects.filter(user = request.user)
-    if bookmark_qs.exists():
-        bookmark = bookmark_qs[0]
-        if bookmark.libraries.filter(id = id).exists():
-            bookmark.libraries.remove(library)
+    compare_qs = models.comparison.objects.filter(user = request.user)
+    if compare_qs.exists():
+        compare = compare_qs[0]
+        if compare.libraries.filter(id = id).exists():
+            compare.libraries.remove(library)
             messages.info(request, "library removed from your Bookmarks")
     else:
         messages.info(request, "library does not exist in your Bookmarks")
-    return redirect("core:bookmarks")
+    return redirect("core:libraries")
 
 def TandCView(request):
     context = {}

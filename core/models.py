@@ -128,7 +128,7 @@ class bookmark(models.Model):
     class Meta:
         verbose_name_plural = 'Bookmarks'
 
-class comaprison(models.Model):
+class comparison(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     libraries = models.ManyToManyField(library)
 

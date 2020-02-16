@@ -15,8 +15,8 @@ class LibraryForm(forms.ModelForm):
         widgets = {
             'opening_time': forms.TimeInput(),
             'closing_time': forms.TimeInput(),
-            'ammenities': forms.SelectMultiple(),
-            'payment_methods': forms.SelectMultiple(),
+            'ammenities': forms.SelectMultiple(attrs={'style':'height:auto;'}),
+            'payment_methods': forms.SelectMultiple(attrs={'style':'height:auto;'}),
             'mobile_no': forms.TextInput(attrs={'pattern':'[0-9]{10}'}),
             'pincode': forms.TextInput(attrs={'pattern': '[0-9]{6}'}),
 

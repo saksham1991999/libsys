@@ -17,7 +17,7 @@ admin.site.register(models.testimonial)
 admin.site.register(models.enquiry)
 admin.site.register(models.bug_report)
 
-admin.site.register(models.comaprison)
+admin.site.register(models.comparison)
 admin.site.register(models.faq)
 admin.site.register(models.Contact)
 
