@@ -87,39 +87,39 @@
 
                         <li>
                             <div>No of Seats</div>
-                            <div>{{ library1.no_of_seats }}</div>
-                            <div>{{ library2.no_of_seats }}</div>
-                            <div>{{ library3.no_of_seats }}</div>
+                            {% if library1 %}<div>{{ library1.no_of_seats }}</div>{% endif %}
+                            {% if library2 %}<div>{{ library2.no_of_seats }}</div>{% endif %}
+                            {% if library3 %}<div>{{ library3.no_of_seats }}</div>{% endif %}
 
                         </li>
 
                         <li>
                             <div>Opening Time</div>
-                            <div>{{ library1.opening_time }}</div>
-                            <div>{{ library2.opening_time }}</div>
-                            <div>{{ library3.opening_time }}</div>
+                            {% if library1 %}<div>{{ library1.opening_time }}</div>{% endif %}
+                            {% if library2 %}<div>{{ library2.opening_time }}</div>{% endif %}
+                            {% if library3 %}<div>{{ library3.opening_time }}</div>{% endif %}
                         </li>
 
                         <li>
                             <div>Closing Time</div>
-                            <div>{{ library1.closing_time }}</div>
-                            <div>{{ library2.closing_time }}</div>
-                            <div>{{ library3.closing_time }}</div>
+                            {% if library1 %}<div>{{ library1.closing_time }}</div>{% endif %}
+                            {% if library2 %}<div>{{ library2.closing_time }}</div>{% endif %}
+                            {% if library3 %}<div>{{ library3.closing_time }}</div>{% endif %}
                         </li>
 
                         <li>
                             <div>Non Refundable Charges</div>
-                            <div>{{ library1.non_refundable_charges }}</div>
-                            <div>{{ library2.non_refundable_charges }}</div>
-                            <div>{{ library3.non_refundable_charges }}</div>
+                            {% if library1 %}<div>{{ library1.non_refundable_charges }}</div>{% endif %}
+                            {% if library2 %}<div>{{ library2.non_refundable_charges }}</div>{% endif %}
+                            {% if library3 %}<div>{{ library3.non_refundable_charges }}</div>{% endif %}
                         </li>
 
                         {% for ammenity in ammenities %}
                         <li>
                             <div>{{ ammenity.title }}</div>
-                            <div>{% if ammenity in library1.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>
-                            <div>{% if ammenity in library2.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>
-                            <div>{% if ammenity in library3.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>
+                            {% if library1 %}<div>{% if ammenity in library1.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>{% endif %}
+                            {% if library2 %}<div>{% if ammenity in library2.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>{% endif %}
+                            {% if library3 %}<div>{% if ammenity in library3.ammenities.all %}<span class="available"></span>{% else %}<span class="not-available"></span>{% endif %}</div>{% endif %}
 
                         </li>
                         {% endfor %}

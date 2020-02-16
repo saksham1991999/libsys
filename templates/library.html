@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{%  load static %}
+{% load static %}
+{% load library_template_tag %}
 
 {% block content %}
 <!-- Wrapper -->
@@ -174,14 +175,13 @@
 
 				<!-- Widget -->
 				<div class="widget margin-bottom-30">
-                    {% if library in bookmarkedlibraries %}
+                    {% if request.user|added_to_bookmark:library.id  %}
                     <a href="{% url 'core:removefrombookmarks' library.id %}" class="button medium">Remove from Bookmarks</a>
                     {% else %}
                     <a href="{% url 'core:addtobookmarks' library.id %}" class="button medium border"><i class="fa fa-star-o"></i>Bookmark</a>
                     {% endif %}
 
-
-                    {% if library in comparinglibraries %}
+                    {% if request.user|added_to_compare:library.id  %}
                     <a href="{% url 'core:removefromcompare' library.id %}" class="button medium">Remove from Compare List</a>
                     {% else %}
                     <a href="{% url 'core:addtocompare' library.id %}" class="button medium border"><i class="icon-compare">Compare</i></a>
