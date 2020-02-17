@@ -9,9 +9,9 @@ class LibraryForm(forms.ModelForm):
     class Meta:
         model = models.library
         exclude = ['owner', 'verified','visible','views']
-        # fields = '__all__'
-        # labels =
-        # widgets =
+        # labels ={
+        #
+        # }
         widgets = {
             'opening_time': forms.TimeInput(),
             'closing_time': forms.TimeInput(),
@@ -19,7 +19,6 @@ class LibraryForm(forms.ModelForm):
             'payment_methods': forms.SelectMultiple(attrs={'style':'height:auto;'}),
             'mobile_no': forms.TextInput(attrs={'pattern':'[0-9]{10}'}),
             'pincode': forms.TextInput(attrs={'pattern': '[0-9]{6}'}),
-
         }
 
 class UserProfileForm(forms.ModelForm):
@@ -68,3 +67,11 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = models.Contact
         fields = '__all__'
+
+class ImagesForm(forms.ModelForm):
+    class Meta:
+        model = models.library_images
+        fields = ['image']
+        widgets = {
+            'image': forms.FileInput(attrs={'multiple': True})
+        }

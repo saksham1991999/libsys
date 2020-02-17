@@ -47,7 +47,7 @@
                         </td>
                         <td class="expire-date">{{ library.views }}</td>
                         <td class="action">
-                            <a href="{% url 'core:editlibrary' library.id %}"><i class="fa fa-pencil"></i> Edit</a>
+                            <a href="{% url 'core:editlibrary' library.id %}"><i class="far fa-edit"></i> Edit</a>
                             {% if library.visible %}
                             <a href="{% url 'core:hidelibrary' library.id %}"><i class="fa  fa-eye-slash"></i> Hide</a>
                             {% else %}

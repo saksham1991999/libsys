@@ -255,12 +255,23 @@ def editLibrary(request, id):
 def addLibrary(request):
     # user = models.User.objects.get(email = request.user.email)
     if request.method == "POST":
+        print(request)
         form = forms.LibraryForm(request.POST, request.FILES)
+
+        imagesform = forms.ImagesForm(request.POST, request.FILES)
+        uploadedimages = request.FILES.getlist('image')
+        print(imagesform)
+
         if form.is_valid():
             new_form = form.save(commit = False)
             new_form.owner = request.user
-
             new_form.save()
+
+            if imagesform.is_valid():
+                for image in uploadedimages:
+                    imageinput = models.library_images(library=new_form, image = image)
+                    imageinput.save()
+
             messages.success(
                             request,
                             'Library Added Successfully',
@@ -269,8 +280,10 @@ def addLibrary(request):
             return redirect('core:mylibraries')
 
     form = forms.LibraryForm()
+    imagesform = forms.ImagesForm()
     context = {
         'form': form,
+        'imagesform': imagesform,
     }
     return render(request, 'dashboard/addlibrary.html', context)
 

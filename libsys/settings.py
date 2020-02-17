@@ -13,7 +13,7 @@ SECRET_KEY = 'rj@tlr0wei52mf_oj&$o2bq+rs9-$p&2t0!*qe6@n93xzz@yxs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['librarylistingp2c.herokuapp.com', 'librarynearby.com', 'librarynearby.in', 'localhost', '127.0.0.1', 'www.librarynearby.com', 'www.librarynearby.in']
 
 
 # Application definition
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'google_analytics',
+    'storages',
 
     'core',
     'exams',
